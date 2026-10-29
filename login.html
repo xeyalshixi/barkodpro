@@ -1,180 +1,60 @@
-<!DOCTYPE html>
-<html lang="az">
+<!doctype html>
+<html lang="az" data-page="login">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BarkodPRO — Müştəri Girişi</title>
-<meta name="description" content="BarkodPRO müştəri portalı — anbarınızı izləyin, satışlara nəzarət edin.">
-<meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📟</text></svg>">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Müştəri girişi — BarkodPRO</title>
+<meta name="description" content="BarkodPRO müştəri portalı: anbar və satışlara nəzarət.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#E8EAE6">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Müştəri girişi — BarkodPRO">
+<meta property="og:description" content="BarkodPRO müştəri portalı: anbar və satışlara nəzarət.">
+<meta property="og:image" content="assets/img/og-cover.png">
+<meta property="og:locale" content="az_AZ">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          sans: ['Space Grotesk', 'sans-serif'],
-          mono: ['JetBrains Mono', 'monospace'],
-        },
-        colors: {
-          ink: '#0a0c10',
-          panel: '#12151b',
-          accent: '#f2a63c',
-          accent2: '#e08a1f',
-          steel: '#5b7a99',
-          mute: '#868c96',
-          fg: '#ece9e2',
-        },
-      }
-    }
-  }
-</script>
-
-<style>
-  :root { color-scheme: dark; }
-  body {
-    background: #0a0c10;
-    color: #ece9e2;
-    font-family: 'Space Grotesk', sans-serif;
-    position: relative;
-    overflow-x: hidden;
-    min-height: 100vh;
-    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 26px 26px;
-  }
-  .font-mono { font-family: 'JetBrains Mono', monospace; }
-
-  .panel {
-    position: relative;
-    background: #12151b;
-    border: 1px solid rgba(255,255,255,0.09);
-  }
-  .panel::before, .panel::after {
-    content: '';
-    position: absolute;
-    width: 14px; height: 14px;
-    opacity: 0;
-    transition: opacity .25s ease;
-    pointer-events: none;
-  }
-  .panel::before { top: -1px; left: -1px; border-top: 2px solid #f2a63c; border-left: 2px solid #f2a63c; }
-  .panel::after { bottom: -1px; right: -1px; border-bottom: 2px solid #f2a63c; border-right: 2px solid #f2a63c; }
-  .panel:hover::before, .panel:hover::after { opacity: 1; }
-
-  .btn-fill {
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    transition: color .3s ease;
-  }
-  .btn-fill::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: #f2a63c;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .3s ease;
-    z-index: -1;
-  }
-  .btn-fill:hover::before { transform: scaleX(1); }
-  .btn-fill:hover { color: #0a0c10 !important; }
-
-  .blink { animation: blink 1.4s steps(1) infinite; }
-  @keyframes blink { 50% { opacity: 0; } }
-
-  input { font-family: 'Space Grotesk', sans-serif; }
-
-  #status-msg { transition: opacity .3s ease, transform .3s ease; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
-
-<body class="antialiased flex items-center justify-center min-h-screen px-5 py-16">
-
-  <div class="w-full max-w-md">
-    <a href="index.html" class="flex items-center justify-center gap-2.5 mb-10">
-      <span class="w-9 h-9 border border-accent flex items-center justify-center text-accent">
-        <i class="fa-solid fa-barcode text-base"></i>
-      </span>
-      <span class="font-mono font-bold text-base tracking-wider text-fg">BARKOD<span class="text-accent">/</span>PRO</span>
-    </a>
-
-    <div class="panel p-8 sm:p-10">
-      <div class="font-mono text-[11px] tracking-[0.2em] text-accent mb-2 flex items-center gap-2">
-        <span class="w-1.5 h-1.5 bg-accent inline-block blink"></span>
-        MÜŞTƏRİ PORTALI
-      </div>
-      <h1 class="text-2xl font-semibold text-fg mb-2">Hesabınıza Giriş</h1>
-      <p class="text-mute text-sm leading-relaxed mb-8">
-        Anbarınızı izləyin, satışlara nəzarət edin və məlumatlarınızı
-        real vaxt rejimində idarə edin.
-      </p>
-
-      <form id="login-form" class="space-y-5">
-        <div>
-          <label class="block text-[10px] font-mono text-mute tracking-widest mb-2">GİRİŞ (İSTİFADƏÇİ ADI)</label>
-          <div class="relative">
-            <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-mute text-sm"></i>
-            <input required type="text" id="lf-login" autocomplete="username" placeholder="istifadeci_adi"
-                   class="w-full pl-11 pr-4 py-3.5 bg-ink border border-white/15 text-fg placeholder-mute/60 focus:outline-none focus:border-accent transition-colors">
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-[10px] font-mono text-mute tracking-widest mb-2">PAROL</label>
-          <div class="relative">
-            <i class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-mute text-sm"></i>
-            <input required type="password" id="lf-password" autocomplete="current-password" placeholder="••••••••"
-                   class="w-full pl-11 pr-4 py-3.5 bg-ink border border-white/15 text-fg placeholder-mute/60 focus:outline-none focus:border-accent transition-colors">
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-[10px] font-mono text-mute tracking-widest mb-2">TƏSDİQ KODU</label>
-          <div class="relative">
-            <i class="fa-solid fa-shield-halved absolute left-4 top-1/2 -translate-y-1/2 text-mute text-sm"></i>
-            <input required type="text" inputmode="numeric" id="lf-otp" autocomplete="one-time-code" placeholder="6 rəqəmli kod"
-                   class="w-full pl-11 pr-4 py-3.5 bg-ink border border-white/15 text-fg placeholder-mute/60 focus:outline-none focus:border-accent transition-colors tracking-widest">
-          </div>
-          <p class="text-[11px] text-mute mt-2">Kod SMS və ya Telegram vasitəsilə göndərilir.</p>
-        </div>
-
-        <button type="submit" id="login-submit"
-                class="btn-fill w-full flex items-center justify-center gap-2 px-6 py-4 border border-accent text-accent font-mono text-xs tracking-widest">
-          <i class="fa-solid fa-right-to-bracket"></i> GİRİŞ ET
-        </button>
-      </form>
-
-      <div class="mt-6 p-4 border border-white/10 text-xs text-mute leading-relaxed">
-        <i class="fa-solid fa-circle-info text-accent mr-1.5"></i>
-        <strong class="text-fg">Demo rejimi:</strong> real müştəri portalı hazırlanma
-        mərhələsindədir. İstənilən giriş, parol və kod ilə demo panelə daxil ola,
-        anbar və satış funksiyalarını sınaya bilərsiniz.
-      </div>
+<body>
+<a class="skip" href="#main"><span data-i18n="a11y.skip">Məzmuna keç</span></a>
+<header class="site-head" id="top">
+  <div class="wrap head-row">
+    <a class="logo" href="index.html" aria-label="BarkodPRO — ana səhifə"><span class="logo-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><g fill="#FFC72C"><rect x="2" y="3" width="2" height="14"/><rect x="5.5" y="3" width="1" height="14"/><rect x="8" y="3" width="2.5" height="14"/><rect x="12" y="3" width="1" height="14"/><rect x="14.5" y="3" width="1.6" height="14"/><rect x="17.2" y="3" width="1" height="14"/></g></svg></span><span>Barkod<b>PRO</b></span></a>
+    <nav class="main-nav" aria-label="Əsas menyu"><a href="index.html#xidmetler" data-i18n="nav.services">Xidmətlər</a><a href="index.html#sistem" data-i18n="nav.system">Sistem</a><a href="index.html#heller" data-i18n="nav.solutions">Həllər</a><a href="anbar-terminal.html" data-i18n="nav.terminal">Anbar Terminal</a><a href="index.html#sorgu" data-i18n="nav.quote">Sorğu</a><a href="index.html#destek" data-i18n="nav.support">Dəstək</a><a href="index.html#elaqe" data-i18n="nav.contact">Əlaqə</a></nav>
+    <div class="head-tools">
+      <div class="lang" role="group" aria-label="Dil / Язык"><button type="button" data-lang="az" aria-pressed="true">AZ</button><button type="button" data-lang="ru" aria-pressed="false">RU</button></div>
+      <a class="btn btn-ink" href="login.html"><span data-i18n="nav.login">Müştəri girişi</span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Menyu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
-
-    <a href="index.html" class="mt-8 flex items-center justify-center gap-2 text-xs font-mono text-mute hover:text-accent transition-colors">
-      <i class="fa-solid fa-arrow-left"></i> ANA SƏHİFƏYƏ QAYIT
-    </a>
   </div>
-
-<script>
-  document.getElementById('login-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const login = document.getElementById('lf-login').value.trim() || 'Müştəri';
-    const btn = document.getElementById('login-submit');
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> YOXLANILIR...';
-    sessionStorage.setItem('barkodpro_demo_user', login);
-    setTimeout(() => { window.location.href = 'dashboard.html'; }, 700);
-  });
-</script>
-
+  <div class="drawer" id="drawer"><nav aria-label="Mobil menyu"><a href="index.html#xidmetler" data-i18n="nav.services">Xidmətlər</a><a href="index.html#sistem" data-i18n="nav.system">Sistem</a><a href="index.html#heller" data-i18n="nav.solutions">Həllər</a><a href="anbar-terminal.html" data-i18n="nav.terminal">Anbar Terminal</a><a href="index.html#sorgu" data-i18n="nav.quote">Sorğu</a><a href="index.html#destek" data-i18n="nav.support">Dəstək</a><a href="index.html#elaqe" data-i18n="nav.contact">Əlaqə</a><a href="login.html" data-i18n="nav.login">Müştəri girişi</a></nav></div>
+</header>
+<main id="main" class="auth">
+  <div class="auth-card">
+    <h1 data-i18n="lg.h">Müştəri girişi</h1>
+    <p data-i18n="lg.p">Anbarınızı, satışlarınızı və kassanı bir paneldən izləyin.</p>
+    <form id="loginForm">
+      <div class="field"><label for="lgUser" data-i18n="lg.u">İstifadəçi adı</label><input id="lgUser" autocomplete="username" required placeholder="istifadeci_adi" data-i18n-ph="lg.u.ph"></div>
+      <div class="field"><label for="lgPass" data-i18n="lg.pw">Parol</label><input id="lgPass" type="password" autocomplete="current-password" required></div>
+      <div class="field"><label for="lgOtp" data-i18n="lg.otp">Təsdiq kodu</label><input id="lgOtp" inputmode="numeric" autocomplete="one-time-code" required placeholder="6 rəqəmli kod" data-i18n-ph="lg.otp.ph"><span data-i18n="lg.otp.h" class="hint">Kod SMS və ya Telegram ilə göndərilir.</span></div>
+      <button class="btn btn-primary" type="submit" id="lgBtn"><span data-i18n="lg.b">Daxil olun</span></button>
+    </form>
+    <div class="demo-note"><strong data-i18n="lg.d1">Demo rejimi:</strong> <span data-i18n="lg.d2">real müştəri portalı hazırlanır. İstənilən giriş, parol və kodla demo panelə daxil olub kassa və anbar funksiyalarını sınaya bilərsiniz.</span></div>
+  </div>
+</main>
+<footer class="site-foot on-ink">
+  <div class="wrap foot-row">
+    <a class="logo" href="index.html" aria-label="BarkodPRO — ana səhifə"><span class="logo-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><g fill="#FFC72C"><rect x="2" y="3" width="2" height="14"/><rect x="5.5" y="3" width="1" height="14"/><rect x="8" y="3" width="2.5" height="14"/><rect x="12" y="3" width="1" height="14"/><rect x="14.5" y="3" width="1.6" height="14"/><rect x="17.2" y="3" width="1" height="14"/></g></svg></span><span>Barkod<b>PRO</b></span></a>
+    <nav aria-label="Alt menyu"><a href="index.html#xidmetler" data-i18n="nav.services">Xidmətlər</a><a href="anbar-terminal.html" data-i18n="nav.terminal">Anbar Terminal</a><a href="index.html#sorgu" data-i18n="nav.quote">Sorğu</a><a href="index.html#destek" data-i18n="nav.support">Dəstək</a><a href="login.html" data-i18n="nav.login">Müştəri girişi</a></nav>
+    <p>© <span data-year>2026</span> BarkodPRO. <span data-i18n="foot.rights">Şamaxı, Azərbaycan</span></p>
+  </div>
+</footer>
+<a class="fab" href="https://wa.me/994516782878?text=Salam%2C%20BarkodPRO%20haqq%C4%B1nda%20m%C9%99lumat%20almaq%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-1 .8a3.5 3.5 0 0 1-2.1-2.1l.8-1-1-2z" fill="currentColor" stroke="none"/></svg></a>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/site.js"></script>
 </body>
 </html>
