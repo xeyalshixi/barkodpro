@@ -6,8 +6,7 @@ BarkodPRO-nun rəsmi saytı: 1C:Enterprise, vergi kassası, POS, barkod, anbar t
 
 | Fayl | Nədir |
 |---|---|
-| `index.html` | Ana səhifə: sorğu konsolu, həllər, Mobil İzləmə tanıtımı, xidmətlər, 1C düzəliş və inteqrasiya (kod nümunələri), faydalı alətlər (maaş, ƏDV, qiymət/marja, endirim, barkod, tərəzi barkodu, kassa sayımı, mal dövriyyəsi), müşayiət paketləri, kalkulyator, FAQ, əlaqə. Tək fayl — CSS və JS içindədir |
-| `mobil-izleme.html` | Mobil İzləmə BarkodPRO məhsul səhifəsi (canlı telefon demosu ilə). Tək fayl |
+| `index.html` | Ana səhifə: xidmətlər, sistem xəritəsi, həllər, sahələr, iş prosesi, sorğu forması, dəstək, FAQ, əlaqə |
 | `anbar-terminal.html` | Anbar Terminal (Android) məhsul səhifəsi |
 | `login.html` | Müştəri girişi (demo rejimi — `dashboard.html`-ə keçir) |
 | `dashboard.html` | POS / satış demo paneli (dəyişməyib) |
