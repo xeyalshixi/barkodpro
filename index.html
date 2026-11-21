@@ -1,260 +1,985 @@
-<!doctype html>
-<html lang="az" data-page="home">
+<!DOCTYPE html>
+<html lang="az">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BarkodPRO — 1C, vergi kassası, POS və anbar sistemləri</title>
-<meta name="description" content="1C:Enterprise, vergi kassası, POS, barkod, anbar terminalı və API inteqrasiyaları. Mağaza, aptek, restoran və anbarlar üçün. 24/7 texniki dəstək.">
+<meta name="description" content="BarkodPRO — 1C əsasında kassa, e-kassa inteqrasiyası, anbar terminalı, mobil hesabatlar və texniki müşayiət. Market, restoran, aptek və anbarlar üçün.">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#E8EAE6">
 <meta property="og:type" content="website">
-<meta property="og:title" content="BarkodPRO — 1C, vergi kassası, POS və anbar sistemləri">
-<meta property="og:description" content="1C:Enterprise, vergi kassası, POS, barkod, anbar terminalı və API inteqrasiyaları. Mağaza, aptek, restoran və anbarlar üçün. 24/7 texniki dəstək.">
+<meta property="og:title" content="BarkodPRO — barkoddan fiskal çekə qədər, hər şey 1C-də">
 <meta property="og:image" content="assets/img/og-cover.png">
 <meta property="og:locale" content="az_AZ">
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:description" content="Kassa, e-kassa, anbar terminalı, Mobil İzləmə, 1C düzəlişləri və inteqrasiyalar.">
+<meta name="theme-color" content="#111214">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23111214%22/%3E%3Cg%20fill%3D%22%23fff%22%3E%3Crect%20x%3D%2212%22%20y%3D%2214%22%20width%3D%226%22%20height%3D%2236%22/%3E%3Crect%20x%3D%2222%22%20y%3D%2214%22%20width%3D%223%22%20height%3D%2236%22/%3E%3Crect%20x%3D%2229%22%20y%3D%2214%22%20width%3D%227%22%20height%3D%2236%22/%3E%3Crect%20x%3D%2240%22%20y%3D%2214%22%20width%3D%223%22%20height%3D%2236%22/%3E%3Crect%20x%3D%2247%22%20y%3D%2214%22%20width%3D%225%22%20height%3D%2236%22/%3E%3C/g%3E%3Crect%20x%3D%226%22%20y%3D%2230%22%20width%3D%2252%22%20height%3D%224%22%20rx%3D%222%22%20fill%3D%22%23e6261f%22/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"BarkodPRO","description":"1C əsasında kassa, e-kassa inteqrasiyası, anbar terminalı, mobil hesabatlar və texniki müşayiət.","telephone":"+994516782878","address":{"@type":"PostalAddress","addressLocality":"Şamaxı","addressCountry":"AZ"},"sameAs":["https://t.me/k1r1pt0n"],"openingHours":"Mo-Su 00:00-24:00"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "BarkodPRO", "description": "1C:Enterprise, vergi kassaları, POS, barkod, anbar və API inteqrasiyaları; 24/7 texniki dəstək.", "telephone": "+994516782878", "address": {"@type": "PostalAddress", "addressLocality": "Şamaxı", "addressCountry": "AZ"}, "sameAs": ["https://t.me/k1r1pt0n"], "openingHours": "Mo-Su 00:00-24:00"}</script>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: confident shop-floor engineer — direct, practical, Azerbaijani
+   IDEA: the 1C query console — the place where a business's numbers actually live
+   PICTURE: a live console in a dark hero, typing a query and returning fresh rows each visit
+   COLOUR and TYPE: night hero #0f1012 with red laser glow, white body, accent red #e6261f, yellow #ffcc00; Figtree + Plex Mono in the console
+   LAYOUT: full-width bands; hero split on wide, stacked on phones; barcode stripes as section dividers */
+:root{color-scheme:light;--red:#e6261f;--yel:#ffcc00;--bg:#ffffff;--bg2:#f4f4f1;--ink:#111214;--mute:#55585e;--line:#e2e2dd;--paper:#fffdf6;--card:#fff;--hdr:rgba(255,255,255,.92)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#0f1012;--bg2:#17181b;--ink:#f1f1ee;--mute:#a6a9ae;--line:#2a2c30;--paper:#f3f1e8;--card:#1b1c20;--hdr:rgba(15,16,18,.92)}}
+:root[data-theme=dark]{color-scheme:dark;--bg:#0f1012;--bg2:#17181b;--ink:#f1f1ee;--mute:#a6a9ae;--line:#2a2c30;--paper:#f3f1e8;--card:#1b1c20;--hdr:rgba(15,16,18,.92)}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Figtree,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+h1,h2,h3{font-weight:800;line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,4vw,44px)}h3{font-size:19px;line-height:1.25}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(44px,6vw,88px) max(5vw,16px)}
+.alt{background:var(--bg2)}
+.dark{background:#111214;color:#f1f1ee;--mute:#a6a9ae;--line:#2a2c30;--card:#1b1c20}
+.lead{color:var(--mute);font-size:17px;max-width:62ch;margin-top:14px}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:10px;font:600 16px Figtree,sans-serif;text-decoration:none;border:2px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer}
+.btn.o{background:transparent;color:var(--ink)}
+.btn.r{background:var(--red);border-color:var(--red);color:#fff}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.stripes{height:14px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 9px,transparent 9px 11px,var(--ink) 11px 12px,transparent 12px 16px);opacity:.9}
+/* header */
+header{position:sticky;top:0;z-index:20;background:var(--hdr);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:20px;padding:10px max(5vw,16px);max-width:1340px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;text-decoration:none}
+.logo b{color:var(--red)}
+.menu{display:flex;gap:22px;margin-left:auto;flex-wrap:wrap}
+.menu a{text-decoration:none;font-weight:500;color:var(--mute)}.menu a:hover{color:var(--ink)}
+.nav .btn{min-height:42px;padding:0 16px;font-size:15px}
+.theme{flex:none;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:transform .3s}
+.theme:hover{transform:rotate(20deg)}.theme:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.theme svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;grid-area:1/1}
+.theme .sun,html.is-dark .theme .moon{display:none}html.is-dark .theme .sun{display:block}
+.burger{display:none;flex:none;width:44px;height:44px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);place-items:center;cursor:pointer}
+.burger svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.drawer{display:grid;padding:6px max(5vw,16px) 16px;border-top:1px solid var(--line)}
+.drawer[hidden]{display:none}
+.drawer a{text-decoration:none;font-weight:600;font-size:17px;padding:12px 0;border-bottom:1px solid var(--line)}
+.card .more{margin-top:auto;font-weight:600;color:var(--red);text-decoration:none}
+@media(max-width:900px){.menu{display:none}.burger{display:grid;margin-left:auto}}
+@media(min-width:901px){.drawer{display:none!important}}
+.nav .tel{white-space:nowrap}
+.tel .ph{display:none;width:20px;height:20px;fill:none;stroke:#fff;stroke-width:2;stroke-linejoin:round}
+@media(max-width:600px){.nav{gap:8px}.nav .tel .tl{display:none}.logo{font-size:19px}}
+@media(max-width:460px){.nav .tel{width:44px;padding:0}.nav .tel .num{display:none}.tel .ph{display:block}}
+/* hero */
+.hero-band{position:relative;overflow:hidden;background:#0f1012;color:#f1f1ee;--ink:#f1f1ee;--bg:#0f1012;--mute:#a6a9ae;--line:#2a2c30;--card:#1b1c20;padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(48px,7vw,96px)}
+.hero-band::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 85% 30%,rgba(230,38,31,.22),transparent 70%),radial-gradient(40% 50% at 10% 100%,rgba(255,204,0,.08),transparent 70%);pointer-events:none}
+.hero-band::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:repeating-linear-gradient(90deg,#fff 0 2px,transparent 2px 6px,#fff 6px 10px,transparent 10px 13px,#fff 13px 14px,transparent 14px 19px);opacity:.04;pointer-events:none}
+.hero{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,4.5vw,64px);align-items:center}
+.kick{display:inline-block;font-size:14px;font-weight:600;color:#f1f1ee;border:1px solid #3a3d44;border-radius:999px;padding:6px 14px;margin-bottom:20px;background:rgba(255,255,255,.04)}
+.hero h1{font-size:clamp(36px,5vw,58px)}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 86%,var(--red) 86% 96%,transparent 96%)}
+.hero .lead{font-size:17.5px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+@keyframes in{to{opacity:1}}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:34px;border-top:1px solid var(--line);padding-top:20px}
+.facts b{display:block;font-size:18px}.facts span{color:var(--mute);font-size:14px}
+.hero .console{position:relative;box-shadow:0 40px 80px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.04)}
+.laser{position:absolute;left:0;right:0;top:0;height:2px;background:var(--red);box-shadow:0 0 12px 3px rgba(230,38,31,.6);opacity:.55;animation:sweep 5s ease-in-out infinite;pointer-events:none}
+@keyframes sweep{0%,100%{transform:translateY(90px)}50%{transform:translateY(520px)}}
+@media(max-width:960px){.hero{grid-template-columns:1fr}}
+@media(max-width:480px){.facts{grid-template-columns:1fr}}
+/* query console */
+.console{background:#14161a;color:#e8e8e4;border-radius:16px;border:1px solid #2a2c30;box-shadow:0 30px 60px -30px rgba(0,0,0,.55);overflow:hidden}
+.qbar{display:flex;align-items:center;gap:7px;padding:12px 16px;background:#1d2024;border-bottom:1px solid #2a2c30;font-size:14px;color:#a6a9ae}
+.qbar i{width:11px;height:11px;border-radius:50%;background:#3a3d44}.qbar i:first-child{background:var(--red)}.qbar i:nth-child(2){background:var(--yel)}
+.qbar span{margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.qbtn{margin-left:auto;width:32px;height:32px;border-radius:8px;border:1px solid #3a3d44;background:transparent;color:#e8e8e4;font-size:17px;cursor:pointer}.qbtn:hover{border-color:var(--red)}
+.qtabs{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid #2a2c30;overflow-x:auto;scrollbar-width:none}
+.qtabs button{flex:none;min-height:34px;padding:0 12px;border-radius:8px;border:1px solid transparent;background:transparent;color:#a6a9ae;font:500 14px Figtree,sans-serif;cursor:pointer}
+.qtabs button:hover{color:#fff}.qtabs button[aria-selected=true]{background:#2a2d33;color:#fff;border-color:#3a3d44}
+.qtabs button:focus-visible,.qbtn:focus-visible{outline:2px solid var(--red);outline-offset:1px}
+.qcode{margin:0;padding:16px 18px;font:13.5px/1.6 "IBM Plex Mono",monospace;color:#d6d6d0;border-bottom:1px solid #2a2c30;min-height:230px;white-space:pre;overflow-x:auto}
+.qcode .k{color:#ff6b5e;font-weight:600}.qcode .p{color:var(--yel)}.qcode .c{color:#7d828a}.qcode .s{color:#8fd3a5}
+.qres{padding:6px 10px 4px;min-height:150px}
+.qres table{width:100%;border-collapse:collapse;font-size:14.5px}
+.qres th{text-align:left;color:#a6a9ae;font-weight:500;padding:8px;border-bottom:1px solid #2a2c30;white-space:nowrap}
+.qres td{padding:9px 8px;border-bottom:1px solid #22252a;white-space:nowrap}
+.qres .n{text-align:right;font-variant-numeric:tabular-nums}
+.qres tr.row{opacity:0;animation:in .3s forwards}
+.qres .bad{color:#ff6b5e;font-weight:600}.qres .good{color:#6fd39a}
+.pill{display:inline-block;font-size:12.5px;font-weight:600;padding:2px 9px;border-radius:999px;background:rgba(111,211,154,.15);color:#6fd39a}
+.pill.w{background:rgba(255,204,0,.15);color:var(--yel)}.pill.e{background:rgba(255,107,94,.15);color:#ff6b5e}
+.qfoot{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 18px 14px;font-size:13.5px;color:#a6a9ae}
+.cursor::after{content:"▍";color:var(--red);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media(max-width:520px){.qcode{font-size:12px;padding:14px;overflow-x:auto}.qres table{font-size:13px}}
+/* tools */
+.ttabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:22px;scrollbar-width:thin}
+.ttabs button{flex:none;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:600 15px Figtree,sans-serif;cursor:pointer}
+.ttabs button[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ttabs button:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.tpanel[hidden]{display:none}
+.hint{color:var(--mute);font-size:14px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg label{display:flex;align-items:center;gap:8px;margin:0;min-height:44px;padding:0 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);font-weight:500;cursor:pointer}
+.seg input{width:18px;height:18px;min-height:0;accent-color:var(--red)}
+.seg label.on{border-color:var(--red)}
+.out .btn.o{color:#f1f1ee;border-color:#f1f1ee}
+.out .sub{color:#a6a9ae;font-size:13.5px;margin-top:8px}
+.out .row.tot{border-bottom:0;color:#fff;font-weight:600}
+.out.light .bbox{background:#fff;border-radius:10px;padding:14px;display:grid;place-items:center;min-height:170px}
+.bbox svg{width:100%;max-width:320px;height:auto}
+.cash{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:10px}
+.cash label{display:flex;align-items:center;gap:8px;margin:0;font-weight:600;border:1.5px solid var(--line);border-radius:10px;padding:6px 6px 6px 12px;background:var(--card)}
+.cash label span{flex:none;min-width:58px;white-space:nowrap}
+.cash input{min-height:40px;padding:6px 10px;text-align:right;border:0;background:var(--bg2)}
+.cash .coin span{color:var(--mute)}
+/* sectors */
+.sectors{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.sectors span{border:1.5px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:600}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.card p{color:var(--mute);font-size:15.5px}
+.card .tag{align-self:flex-start;font-size:13px;font-weight:600;border-radius:6px;padding:3px 8px;background:var(--yel);color:#111}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--ink);display:grid;place-items:center}
+.ico svg{width:24px;height:24px;stroke:var(--bg);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card ul{margin:0;padding-left:18px;color:var(--mute);font-size:15px}
+/* tiers */
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.tier{border:1px solid var(--line);border-radius:18px;padding:26px;background:var(--card);display:flex;flex-direction:column;gap:14px;position:relative}
+.tier.hot{border:2px solid var(--red)}
+.tier.hot::before{content:"Ən çox seçilən";position:absolute;top:-13px;left:22px;background:var(--red);color:#fff;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px}
+.tier .p{font-size:40px;font-weight:800;white-space:nowrap}.tier .p small{font-size:16px;font-weight:500;color:var(--mute)}
+.tier ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15.5px}
+.tier li{padding-left:24px;position:relative}.tier li::before{content:"";position:absolute;left:2px;top:7px;width:12px;height:7px;border-left:2.5px solid var(--red);border-bottom:2.5px solid var(--red);transform:rotate(-45deg)}
+.tier .btn{margin-top:auto}
+.note{color:var(--mute);font-size:14px;margin-top:18px}
+@media(max-width:860px){.tiers{grid-template-columns:1fr}}
+/* calculator */
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:24px;align-items:start}
+.form{display:grid;gap:18px}
+label{font-weight:600;display:block;margin-bottom:6px}
+input,select,textarea{width:100%;font:16px Figtree,sans-serif;min-height:48px;padding:10px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+input[type=range]{padding:0;border:0;background:none;accent-color:var(--red)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:1.5px solid var(--line);border-radius:10px;cursor:pointer;font-weight:500;background:var(--card)}
+.chip input{width:18px;height:18px;min-height:0;accent-color:var(--red)}
+.chip.on{border-color:var(--red)}
+.out{position:sticky;top:90px;background:#111214;color:#f1f1ee;border-radius:18px;padding:26px;display:grid;gap:10px}
+.out .big{font-size:clamp(40px,6vw,56px);font-weight:800;white-space:nowrap}
+.out .big small{font-size:18px;font-weight:500;color:#a6a9ae}
+.out .row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #3a3d44;padding:6px 0;color:#c9cbcf}
+.out .row b{color:#fff;white-space:nowrap}
+@media(max-width:860px){.calc{grid-template-columns:1fr}.out{position:static}}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;position:relative}
+.step{position:relative;padding-top:34px}
+.step::before{content:"";position:absolute;top:8px;left:0;width:18px;height:18px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(230,38,31,.25)}
+.step::after{content:"";position:absolute;top:16px;left:26px;right:-14px;height:2px;background:var(--line)}
+.step:last-child::after{display:none}
+.step p{color:var(--mute);font-size:15px;margin-top:6px}
+@media(max-width:860px){.steps{grid-template-columns:1fr}.step{padding:0 0 0 38px}.step::before{top:2px}.step::after{left:8px;top:26px;bottom:-16px;right:auto;width:2px;height:auto}}
+/* faq */
+.faq{display:grid;gap:10px;max-width:880px}
+details{border:1px solid var(--line);border-radius:14px;background:var(--card)}
+summary{cursor:pointer;padding:18px 20px;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";font-size:24px;line-height:1;color:var(--red)}
+details[open] summary::after{content:"–"}
+details p{padding:0 20px 18px;color:var(--mute)}
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,60px)}
+.ways{display:grid;gap:12px;margin-top:26px}
+.way{display:flex;gap:14px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:14px;text-decoration:none}
+.way .ico{background:var(--red)}.way .ico svg{stroke:#fff}
+.way span{color:var(--mute);font-size:14px;display:block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ok-msg{display:none;padding:14px 16px;border-radius:10px;background:rgba(10,125,60,.15);font-weight:500}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--mute);font-size:14.5px}
+.chk input{width:20px;height:20px;min-height:0;margin-top:2px;accent-color:var(--red);flex:none}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+/* footer */
+footer{padding:48px max(5vw,16px) 28px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}
+.foot a{display:block;text-decoration:none;color:#a6a9ae;padding:4px 0}.foot a:hover{color:#fff}
+.foot h3{font-size:16px;margin-bottom:8px}
+.legal{border-top:1px solid #2a2c30;margin-top:32px;padding-top:18px;color:#8a8d93;font-size:13.5px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+@media(max-width:760px){.foot{grid-template-columns:1fr}}
+.wa{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.wa svg{width:30px;height:30px;fill:#fff}
+/* mobil izləmə tanıtımı */
+.btn.v{background:#6c5ce7;border-color:#6c5ce7;color:#fff}
+.mob{position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(108,92,231,.10),transparent 55%),var(--bg)}
+.mob-g{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,72px);align-items:center}
+.kick.v{color:#6c5ce7;border-color:rgba(108,92,231,.4);background:rgba(108,92,231,.08)}
+.mob-l{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mob-l li{border:1px solid var(--line);border-radius:12px;padding:10px 14px;background:var(--card);color:var(--mute);font-size:15px}
+.mob-l b{color:var(--ink);display:block;font-size:17px}
+.mini{justify-self:center;display:block;width:min(300px,100%);aspect-ratio:9/15.5;border-radius:40px;background:#050507;padding:10px;text-decoration:none;box-shadow:0 40px 80px -30px rgba(31,24,78,.6),0 0 0 1px #2a2c30;transform:rotate(3deg);transition:transform .35s}
+.mini:hover{transform:rotate(0) translateY(-4px)}
+.mini-s{height:100%;border-radius:31px;overflow:hidden;background:#eae7f6;color:#1e1b2e;display:flex;flex-direction:column;gap:8px;font:12px/1.35 -apple-system,'Segoe UI',Roboto,sans-serif}
+.mini-h{background:linear-gradient(135deg,#8370f5,#6c5ce7 55%,#5241c7);color:#fff;padding:34px 14px 14px;display:flex;justify-content:space-between;align-items:center}
+.mini-h b{font-size:15px}.mini-h span{font-size:10px;font-weight:700;background:rgba(16,185,129,.25);color:#d1fae5;padding:3px 8px;border-radius:999px}
+.mini-3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:0 10px}
+.mini-3 div{background:#fff;border-radius:12px;padding:8px;box-shadow:0 8px 16px -10px rgba(31,24,78,.3)}
+.mini-3 b{display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mini-3 span{font-size:9.5px;color:#6b6880}.mini-3 small{display:block;font-size:9.5px;font-weight:700;color:#16a34a}
+.mini-c{margin:0 10px;background:#fff;border-radius:14px;overflow:hidden}
+.mini-c div{display:flex;justify-content:space-between;gap:6px;padding:6px 10px;border-top:1px solid rgba(124,105,239,.12);font-size:11px}
+.mini-c div:first-child{border-top:0;background:rgba(124,105,239,.07);font-weight:800}
+.mini-c span{color:#6b6880}
+.mini-btn{margin:auto 10px 14px;border-radius:12px;padding:10px;text-align:center;font-weight:700;color:#fff;background:linear-gradient(135deg,#8674f7,#6c5ce7 60%,#5b4bc4)}
+@media(max-width:860px){.mob-g{grid-template-columns:1fr}.mini{transform:none}}
+@media(max-width:420px){.mob-l{grid-template-columns:1fr}}
+/* 1C inteqrasiya */
+.int-g{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,4.5vw,64px);align-items:start}
+.int-l{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+.int-l div{border:1px solid #2a2c30;border-radius:12px;padding:12px 14px;background:#17181b}
+.int-l b{display:block;color:#fff;font-size:15.5px}.int-l span{color:#a6a9ae;font-size:13.5px}
+.dark .btn.o{color:#f1f1ee;border-color:#f1f1ee}
+.code .qcode{min-height:330px;border-bottom:0}
+.code .qfoot{border-top:1px solid #2a2c30;padding-top:12px;line-height:1.45}
+.qcode .f{color:#8fb9ff}
+@media(max-width:960px){.int-g{grid-template-columns:1fr}}
+@media(max-width:460px){.int-l{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.laser{animation:none;display:none}html{scroll-behavior:auto}.mini{transform:none}}
+</style>
 </head>
 <body>
-<a class="skip" href="#main"><span data-i18n="a11y.skip">Məzmuna keç</span></a>
-<header class="site-head" id="top">
-  <div class="wrap head-row">
-    <a class="logo" href="index.html" aria-label="BarkodPRO — ana səhifə"><span class="logo-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><g fill="#FFC72C"><rect x="2" y="3" width="2" height="14"/><rect x="5.5" y="3" width="1" height="14"/><rect x="8" y="3" width="2.5" height="14"/><rect x="12" y="3" width="1" height="14"/><rect x="14.5" y="3" width="1.6" height="14"/><rect x="17.2" y="3" width="1" height="14"/></g></svg></span><span>Barkod<b>PRO</b></span></a>
-    <nav class="main-nav" aria-label="Əsas menyu"><a href="#xidmetler" data-i18n="nav.services">Xidmətlər</a><a href="#sistem" data-i18n="nav.system">Sistem</a><a href="#heller" data-i18n="nav.solutions">Həllər</a><a href="anbar-terminal.html" data-i18n="nav.terminal">Anbar Terminal</a><a href="#sorgu" data-i18n="nav.quote">Sorğu</a><a href="#destek" data-i18n="nav.support">Dəstək</a><a href="#elaqe" data-i18n="nav.contact">Əlaqə</a></nav>
-    <div class="head-tools">
-      <div class="lang" role="group" aria-label="Dil / Язык"><button type="button" data-lang="az" aria-pressed="true">AZ</button><button type="button" data-lang="ru" aria-pressed="false">RU</button></div>
-      <a class="btn btn-ink" href="login.html"><span data-i18n="nav.login">Müştəri girişi</span></a>
-      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Menyu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+
+<header>
+  <nav class="nav" aria-label="Əsas menyu">
+    <a class="logo" href="#top"><svg width="30" height="26" viewBox="0 0 30 26" aria-hidden="true"><g fill="currentColor"><rect x="0" width="3" height="26"/><rect x="5" width="1.5" height="26"/><rect x="8.5" width="4" height="26"/><rect x="14.5" width="1.5" height="26"/><rect x="18" width="3" height="26"/><rect x="23" width="1.5" height="26"/><rect x="26.5" width="3.5" height="26"/></g><rect x="-2" y="12" width="34" height="2" fill="#e6261f"/></svg><span>Barkod<b>PRO</b></span></a>
+    <div class="menu">
+      <a href="#heller">Həllər</a><a href="mobil-izleme.html">Mobil İzləmə</a><a href="anbar-terminal.html">Anbar Terminal</a><a href="#inteqrasiya">1C düzəliş</a><a href="#aletler">Alətlər</a><a href="#musayiet">Müşayiət</a><a href="#sual">Suallar</a><a href="#elaqe">Əlaqə</a>
     </div>
-  </div>
-  <div class="drawer" id="drawer"><nav aria-label="Mobil menyu"><a href="#xidmetler" data-i18n="nav.services">Xidmətlər</a><a href="#sistem" data-i18n="nav.system">Sistem</a><a href="#heller" data-i18n="nav.solutions">Həllər</a><a href="anbar-terminal.html" data-i18n="nav.terminal">Anbar Terminal</a><a href="#sorgu" data-i18n="nav.quote">Sorğu</a><a href="#destek" data-i18n="nav.support">Dəstək</a><a href="#elaqe" data-i18n="nav.contact">Əlaqə</a><a href="login.html" data-i18n="nav.login">Müştəri girişi</a></nav></div>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Menyu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <button class="theme" id="thm" type="button" aria-label="Gecə/gündüz rejimi" title="Gecə/gündüz rejimi"><svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5"/></svg><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <a class="btn r tel" href="tel:+994516782878" aria-label="Zəng et: 051 678 28 78"><svg class="ph" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="tl">Kassa işləmir?</span> <span class="num">051 678 28 78</span></a>
+  </nav>
+  <nav class="drawer" id="drawer" aria-label="Mobil menyu" hidden><a href="#heller">Həllər</a><a href="mobil-izleme.html">Mobil İzləmə</a><a href="anbar-terminal.html">Anbar Terminal</a><a href="#xidmetler">Xidmətlər</a><a href="#inteqrasiya">1C düzəliş və inteqrasiya</a><a href="#aletler">Faydalı alətlər</a><a href="#musayiet">Müşayiət</a><a href="#kalkulyator">Kalkulyator</a><a href="#sual">Suallar</a><a href="#elaqe">Əlaqə</a><a href="login.html">Müştəri girişi</a></nav>
 </header>
-<main id="main">
-<section class="hero">
-  <div class="wrap hero-grid">
+
+<main id="top">
+<section class="band hero-band">
+  <div class="wrap hero">
     <div>
-      <h1 data-i18n="h.h1">Kassa, anbar və 1C bir sistemdə işləsin.</h1>
-      <p data-i18n="h.lead" class="lead">Mağaza, aptek, restoran və anbarlar üçün 1C:Enterprise, vergi kassası, POS, barkod və API inteqrasiyalarını qururuq. Satışı bir dəfə vurursunuz — kassaya, anbara və hesabata özü düşür.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://wa.me/994516782878?text=Salam%2C%20BarkodPRO%20haqq%C4%B1nda%20m%C9%99lumat%20almaq%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-1 .8a3.5 3.5 0 0 1-2.1-2.1l.8-1-1-2z" fill="currentColor" stroke="none"/></svg><span data-i18n="h.cta1">WhatsApp-da yazın</span></a>
-        <a class="btn btn-ghost" href="#sorgu"><span data-i18n="h.cta2">Sorğu hazırlayın</span></a>
+      <span class="kick">1C · Kassa · E-kassa · Anbar terminalı</span>
+      <h1>Barkoddan fiskal çekə qədər — <em>hər şey 1C-də</em></h1>
+      <p class="lead">Market, restoran, aptek və anbarlar üçün 1C əsasında kassa, e-kassa inteqrasiyası, anbar terminalı və rəhbər üçün mobil hesabatlar qururuq. Sonra da yanınızda qalırıq: yeniləmələr, ehtiyat nüsxələr, server və gündəlik suallar bizdə.</p>
+      <div class="cta">
+        <a class="btn r" href="#elaqe">Layihəni müzakirə edək</a>
+        <a class="btn o" href="#kalkulyator">Müşayiəti hesabla</a>
       </div>
-      <dl class="facts">
-        <div><dt data-i18n="h.f1">Təcrübə</dt><dd data-i18n="h.f1v">5+ il</dd></div>
-        <div><dt data-i18n="h.f2">Tamamlanmış obyekt</dt><dd>100+</dd></div>
-        <div><dt data-i18n="h.f3">Texniki dəstək</dt><dd>24/7</dd></div>
-        <div><dt data-i18n="h.f4">Reaksiya müddəti</dt><dd data-i18n="h.f4v">&lt; 2 saat</dd></div>
-      </dl>
+      <div class="facts">
+        <div><b>5+ il</b><span>təcrübə</span></div>
+        <div><b>100+</b><span>tamamlanmış obyekt</span></div>
+        <div><b>24/7</b><span>texniki dəstək</span></div>
+      </div>
     </div>
-    <div class="hero-receipt"><div class="receipt print" aria-label="BarkodPRO xidmətləri çek şəklində">
-<div class="receipt-paper">
-  <div class="rc-head"><strong>BARKODPRO</strong><span data-i18n="rc.sub">Rəqəmsal biznes infrastrukturu</span><span>Şamaxı · +994 51 678 28 78</span></div>
-  <hr class="rc-sep">
-  <div class="rc-row"><span data-i18n="rc.date">Tarix</span><span data-today>—</span></div>
-  <div class="rc-row"><span data-i18n="rc.client">Müştəri</span><span data-i18n="rc.yourbiz">Sizin biznes</span></div>
-  <hr class="rc-sep">
-  <ul class="rc-items"><li><span data-i18n="rc.i0">1C:Enterprise qurulması</span><span>[OK]</span></li><li><span data-i18n="rc.i1">Vergi kassası inteqrasiyası</span><span>[OK]</span></li><li><span data-i18n="rc.i2">POS və barkod</span><span>[OK]</span></li><li><span data-i18n="rc.i3">Anbar terminalı (TSD)</span><span>[OK]</span></li><li><span data-i18n="rc.i4">Sayt və API</span><span>[OK]</span></li><li><span data-i18n="rc.i5">24/7 texniki dəstək</span><span>[OK]</span></li></ul>
-  <hr class="rc-sep">
-  <div class="rc-row"><span data-i18n="rc.reentry">Təkrar daxiletmə</span><span>0</span></div>
-  <div class="rc-total"><span data-i18n="rc.total">CƏMİ</span><span data-i18n="rc.one">Vahid sistem</span></div>
-  <svg class="rc-bar" viewBox="0 0 154 58" preserveAspectRatio="none" role="img" aria-label="Barkod"><g fill="#1d1f22"><rect x="10" y="0" width="2" height="58"/><rect x="13" y="0" width="1" height="58"/><rect x="16" y="0" width="1" height="58"/><rect x="21" y="0" width="1" height="58"/><rect x="25" y="0" width="1" height="58"/><rect x="27" y="0" width="2" height="58"/><rect x="32" y="0" width="1" height="58"/><rect x="34" y="0" width="1" height="58"/><rect x="38" y="0" width="2" height="58"/><rect x="43" y="0" width="2" height="58"/><rect x="48" y="0" width="1" height="58"/><rect x="50" y="0" width="3" height="58"/><rect x="54" y="0" width="1" height="58"/><rect x="56" y="0" width="2" height="58"/><rect x="61" y="0" width="3" height="58"/><rect x="65" y="0" width="1" height="58"/><rect x="69" y="0" width="3" height="58"/><rect x="73" y="0" width="2" height="58"/><rect x="76" y="0" width="1" height="58"/><rect x="78" y="0" width="2" height="58"/><rect x="83" y="0" width="1" height="58"/><rect x="87" y="0" width="3" height="58"/><rect x="91" y="0" width="3" height="58"/><rect x="95" y="0" width="2" height="58"/><rect x="98" y="0" width="2" height="58"/><rect x="103" y="0" width="1" height="58"/><rect x="105" y="0" width="3" height="58"/><rect x="109" y="0" width="1" height="58"/><rect x="113" y="0" width="3" height="58"/><rect x="117" y="0" width="2" height="58"/><rect x="120" y="0" width="2" height="58"/><rect x="124" y="0" width="1" height="58"/><rect x="126" y="0" width="1" height="58"/><rect x="131" y="0" width="2" height="58"/><rect x="136" y="0" width="3" height="58"/><rect x="140" y="0" width="1" height="58"/><rect x="142" y="0" width="2" height="58"/></g></svg>
-  <div class="rc-foot"><span data-i18n="rc.thanks">Təşəkkür edirik!</span></div>
-</div></div></div>
-  </div>
-</section>
-<div class="strip"><div class="wrap strip-row"><p data-i18n="strip.l">İşlədiyimiz sistemlər</p><ul><li>1C:Enterprise</li><li>SQL Server</li><li>OneClick</li><li>AzSmart</li><li>Caspos</li><li>Omnitech</li><li>Shopify</li><li>Telegram</li><li>WhatsApp</li><li>AnyDesk</li></ul></div></div>
-
-<section class="sec" id="xidmetler">
-  <div class="wrap">
-    <div class="sec-head"><h2 data-i18n="s.h">Biznesinizin hər nöqtəsi üçün bir xidmət.</h2><p data-i18n="s.p">Hər xidmət ayrıca qurula, mövcud sisteminizə qoşula və sonradan böyüdülə bilər. Lazım olan istiqaməti seçin.</p></div>
-    <div class="filters" role="group" aria-label="Xidmət filtri"><button type="button" data-filter="all" aria-pressed="true"><span data-i18n="flt.all">Hamısı</span></button><button type="button" data-filter="1c" aria-pressed="false"><span data-i18n="flt.1c">1C</span></button><button type="button" data-filter="pos" aria-pressed="false"><span data-i18n="flt.pos">Kassa və POS</span></button><button type="button" data-filter="anbar" aria-pressed="false"><span data-i18n="flt.anbar">Anbar</span></button><button type="button" data-filter="api" aria-pressed="false"><span data-i18n="flt.api">Sayt və API</span></button><button type="button" data-filter="support" aria-pressed="false"><span data-i18n="flt.support">Dəstək</span></button></div>
-    <ul class="svc-list">
-<li class="svc" data-cat="1c"><h3><span data-i18n="svc1.t">1C proqram təminatı</span></h3><p data-i18n="svc1.d">1C:Anbar, 1C:Satış və 1C:Restoran modullarının qurulması, iş prosesinizə uyğunlaşdırılması, yeni hesabat və sənədlər, istifadəçi hüquqları.</p><div class="tags"><span data-i18n="svc1.tag0">Anbar</span><span data-i18n="svc1.tag1">Satış</span><span data-i18n="svc1.tag2">Restoran</span><span data-i18n="svc1.tag3">Hesabatlar</span></div></li>
-<li class="svc" data-cat="pos"><h3><span data-i18n="svc2.t">Vergi kassası və POS</span></h3><p data-i18n="svc2.d">Satış kassaya və 1C-yə eyni anda ötürülür: fiskal çek, qaytarma, növbənin bağlanması. Kassir məlumatı iki dəfə yazmır.</p><div class="tags"><span data-i18n="svc2.tag0">OneClick</span><span data-i18n="svc2.tag1">AzSmart</span><span data-i18n="svc2.tag2">Caspos</span><span data-i18n="svc2.tag3">Omnitech</span></div></li>
-<li class="svc" data-cat="anbar"><h3><a href="anbar-terminal.html" data-i18n="svc3.t">Barkod və anbar (TSD)</a></h3><p data-i18n="svc3.d">Android terminallarla mal qəbulu, sayım, qaytarma və silinmə; sənədlər 1C-yə özü düşür. Barkod etiketlərinin çapı.</p><div class="tags"><span data-i18n="svc3.tag0">Android</span><span data-i18n="svc3.tag1">Barkod</span><span data-i18n="svc3.tag2">Sayım</span></div></li>
-<li class="svc" data-cat="api"><h3><span data-i18n="svc4.t">Sayt və API inteqrasiyası</span></h3><p data-i18n="svc4.d">Shopify və digər saytlarla məhsul, qalıq, qiymət və sifariş mübadiləsi. 1C üçün HTTP servislər.</p><div class="tags"><span data-i18n="svc4.tag0">Shopify</span><span data-i18n="svc4.tag1">REST API</span><span data-i18n="svc4.tag2">HTTP servis</span></div></li>
-<li class="svc" data-cat="api"><h3><span data-i18n="svc5.t">WhatsApp və Telegram bildirişləri</span></h3><p data-i18n="svc5.d">Qaimələrin avtomatik göndərilməsi, satış və silinmə bildirişləri, iş prosesinizə uyğun botlar.</p><div class="tags"><span data-i18n="svc5.tag0">WhatsApp</span><span data-i18n="svc5.tag1">Telegram</span><span data-i18n="svc5.tag2">Bot</span></div></li>
-<li class="svc" data-cat="support"><h3><span data-i18n="svc6.t">Server, SQL və şəbəkə</span></h3><p data-i18n="svc6.d">Windows Server, SQL Server və IIS-in qurulması, 1C serverinin sürəti, ehtiyat nüsxələr və şəbəkə.</p><div class="tags"><span data-i18n="svc6.tag0">Windows Server</span><span data-i18n="svc6.tag1">SQL Server</span><span data-i18n="svc6.tag2">IIS</span></div></li>
-<li class="svc" data-cat="support"><h3><span data-i18n="svc7.t">Uzaqdan texniki dəstək</span></h3><p data-i18n="svc7.d">AnyDesk ilə 1C, server, SQL, POS və inteqrasiya problemlərinin diaqnostikası və onlayn həlli.</p><div class="tags"><span data-i18n="svc7.tag0">AnyDesk</span><span data-i18n="svc7.tag1">24/7</span></div></li>
-    </ul>
-  </div>
-</section>
-
-<section class="sec sec-ink on-ink" id="sistem">
-  <div class="wrap">
-    <div class="sec-head"><h2 data-i18n="m.h">Hər şey 1C-yə bağlanır.</h2><p data-i18n="m.p">Bir hissəyə toxunun — məlumatın oradan 1C-yə necə getdiyini görün.</p></div>
-    <div class="map">
-  <div class="map-stage" role="group" aria-label="Sistem xəritəsi">
-    <svg class="wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line class="wire" data-wire="kassa" x1="50" y1="50" x2="20" y2="20"/><line class="wire" data-wire="pos" x1="50" y1="50" x2="80" y2="20"/><line class="wire" data-wire="shop" x1="50" y1="50" x2="85" y2="52"/><line class="wire" data-wire="msg" x1="50" y1="50" x2="78" y2="84"/><line class="wire" data-wire="mob" x1="50" y1="50" x2="22" y2="84"/><line class="wire" data-wire="tsd" x1="50" y1="50" x2="15" y2="52"/></svg>
-    <div class="map-hub">1C<small data-i18n="map.hub">mərkəz</small></div>
-    <button type="button" class="map-node" data-node="kassa" style="left:20%;top:20%" aria-pressed="false" data-i18n="map.kassa.t">Vergi kassası</button><button type="button" class="map-node" data-node="pos" style="left:80%;top:20%" aria-pressed="false" data-i18n="map.pos.t">Satış və barkod</button><button type="button" class="map-node" data-node="shop" style="left:85%;top:52%" aria-pressed="false" data-i18n="map.shop.t">Onlayn mağaza</button><button type="button" class="map-node" data-node="msg" style="left:78%;top:84%" aria-pressed="false" data-i18n="map.msg.t">Telegram və WhatsApp</button><button type="button" class="map-node" data-node="mob" style="left:22%;top:84%" aria-pressed="false" data-i18n="map.mob.t">Mobil hesabat</button><button type="button" class="map-node" data-node="tsd" style="left:15%;top:52%" aria-pressed="false" data-i18n="map.tsd.t">Anbar terminalı</button>
-  </div>
-  <div class="map-info" aria-live="polite">
-    <p class="map-kind" id="mapKind">Fiskal</p>
-    <h3 id="mapTitle">Vergi kassası</h3>
-    <p id="mapDesc">Satış vurulan kimi fiskal çek çap olunur və satış 1C-də qeydə alınır. Növbə hesabatı kassa ilə proqramda üst-üstə düşür.</p>
-    <ol class="map-flow" id="mapFlow"><li><span>01</span><span data-i18n="map.kassa.f0">Kassir satışı vurur</span></li><li><span>02</span><span data-i18n="map.kassa.f1">Çek fiskallaşdırılır</span></li><li><span>03</span><span data-i18n="map.kassa.f2">Satış 1C-yə yazılır</span></li></ol>
-    <p style="margin-top:22px" id="mapLink" hidden><a class="link" href="anbar-terminal.html" data-i18n="map.more">Anbar Terminal haqqında ətraflı</a></p>
-  </div>
-</div>
-  </div>
-</section>
-
-<section class="sec" id="heller">
-  <div class="wrap">
-    <div class="sec-head"><h2 data-i18n="sol.h">Öz hazırladığımız həllər.</h2><p data-i18n="sol.p">Hazır proqramlarımız 1C ilə birbaşa işləyir və sizin bazanıza uyğunlaşdırılır.</p></div>
-    <article class="feature-prod on-ink">
-      <div>
-        <span data-i18n="fp.badge" class="badge">Yeni</span>
-        <h3 data-i18n="fp.h">Anbar Terminal</h3>
-        <p data-i18n="fp.p">Android telefon və terminallar üçün anbar proqramı. Mal qəbulu, sayım, qaytarma, silinmə və satış birbaşa 1C-yə düşür — internet olmayanda belə.</p>
-        <ul class="checks"><li data-i18n="fp.c.0">Mal qəbulu və qaytarma</li><li data-i18n="fp.c.1">Qrup üzrə sayım</li><li data-i18n="fp.c.2">Oflayn rejim və FTP</li><li data-i18n="fp.c.3">Kassa və hesabatlar</li><li data-i18n="fp.c.4">Telefon və PDA terminallar</li><li data-i18n="fp.c.5">4 dil: AZ, RU, TR, EN</li></ul>
-        <div class="actions"><a class="btn btn-primary" href="anbar-terminal.html"><span data-i18n="fp.a1">Ətraflı baxın</span></a><a class="btn btn-ghost" href="https://wa.me/994516782878?text=Salam%2C%20Anbar%20Terminal%20proqram%C4%B1%20il%C9%99%20maraqlan%C4%B1ram.%20Demo%20g%C3%B6rm%C9%99k%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener"><span data-i18n="fp.a2">Demo istəyin</span></a></div>
-      </div>
-      <div class="phones"><div class="phone"><img src="assets/img/anbar-terminal/home.webp" alt="Anbar Terminal: ana ekran" data-i18n-alt="alt.home" width="600" height="1350" loading="lazy"></div><div class="phone"><img src="assets/img/anbar-terminal/sayim.webp" alt="Anbar Terminal: mal sayımı" data-i18n-alt="alt.sayim" width="600" height="1350" loading="lazy"></div></div>
-    </article>
-    <div class="sol-grid">
-<article class="sol"><h3 data-i18n="sol1.t">Veb POS kassa</h3><p data-i18n="sol1.d">Brauzerdə işləyən kassa. İnternet kəsiləndə satışlar cihazda növbədə qalır, çek termal printerdə çap olunur.</p><div class="tags"><span data-i18n="sol1.tag0">Oflayn</span><span data-i18n="sol1.tag1">Termal çek</span></div></article>
-<article class="sol"><h3 data-i18n="sol2.t">Mobil hesabat tətbiqi</h3><p data-i18n="sol2.d">iPhone üçün: satış, qalıq və kassa hesabatları, sənədlərə baxış — 1C HTTP servis üzərindən.</p><div class="tags"><span data-i18n="sol2.tag0">iOS</span><span data-i18n="sol2.tag1">Hesabatlar</span></div></article>
-<article class="sol"><h3 data-i18n="sol3.t">Ofisiant sifarişi</h3><p data-i18n="sol3.d">Ofisiant telefondan və ya planşetdən sifariş alır, sifariş 1C restoran moduluna düşür.</p><div class="tags"><span data-i18n="sol3.tag0">Restoran</span><span data-i18n="sol3.tag1">Wi-Fi</span></div></article>
-<article class="sol"><h3 data-i18n="sol4.t">Onlayn sifariş forması</h3><p data-i18n="sol4.d">Müştəriləriniz link vasitəsilə sifariş verir, sifariş 1C-də hazır sənəd kimi yaranır.</p><div class="tags"><span data-i18n="sol4.tag0">Topdan satış</span><span data-i18n="sol4.tag1">Link</span></div></article>
-<article class="sol"><h3 data-i18n="sol5.t">Fiskal inteqrasiya modulları</h3><p data-i18n="sol5.d">1C-ni OneClick, AzSmart, Caspos və Omnitech kassalarına qoşan hazır modullar.</p><div class="tags"><span data-i18n="sol5.tag0">e-kassa</span><span data-i18n="sol5.tag1">1C</span></div></article>
-<article class="sol"><h3 data-i18n="sol6.t">Satış demo paneli</h3><p data-i18n="sol6.d">Kassa, anbar, sayım və hesabatların necə işlədiyini brauzerdə özünüz sınayın.</p><p style="margin-top:14px"><a class="link" href="login.html" data-i18n="sol6.a">Demo panelə keçin</a></p></article>
+    <div class="console" id="qc" aria-live="polite">
+      <div class="qbar"><i></i><i></i><i></i><span id="qt">Sorğu konsolu</span><button type="button" id="qnext" class="qbtn" aria-label="Başqa sorğu">↻</button></div>
+      <div class="qtabs" id="qtabs" role="tablist" aria-label="Sorğular"></div>
+      <pre class="qcode" id="qcode"></pre>
+      <div class="qres scroll"><table id="qtab"></table></div>
+      <div class="qfoot"><span id="qstat"></span></div>
+      <div class="laser" aria-hidden="true"></div>
     </div>
   </div>
 </section>
+<div class="stripes" aria-hidden="true"></div>
 
-<section class="sec sec-paper" id="saheler">
+<section class="band alt" id="heller">
   <div class="wrap">
-    <div class="sec-head"><h2 data-i18n="sec.h">Hansı biznes üçün?</h2><p data-i18n="sec.p">Eyni əsas üzərində hər sahə üçün öz iş axınını qururuq.</p></div>
-    <ul class="sectors">
-<li class="sector"><h3 data-i18n="sec1.t">Mağaza və market</h3><p data-i18n="sec1.d">Barkod, POS, tərəzi və vergi kassası 1C ilə bir axında işləyir.</p><div class="tags"><span data-i18n="sec1.tag0">POS</span><span data-i18n="sec1.tag1">Tərəzi</span><span data-i18n="sec1.tag2">Fiskal</span></div></li>
-<li class="sector"><h3 data-i18n="sec2.t">Aptek</h3><p data-i18n="sec2.d">Dəqiq qalıq, vaxtı keçən malların silinməsi, tədarükçüyə qaytarma.</p><div class="tags"><span data-i18n="sec2.tag0">Qalıq</span><span data-i18n="sec2.tag1">Silinmə</span></div></li>
-<li class="sector"><h3 data-i18n="sec3.t">Restoran və kafe</h3><p data-i18n="sec3.d">Sifariş, mətbəx, çek və fiskal qeydiyyat bir-birinə bağlıdır.</p><div class="tags"><span data-i18n="sec3.tag0">1C:Restoran</span><span data-i18n="sec3.tag1">Ofisiant</span></div></li>
-<li class="sector"><h3 data-i18n="sec4.t">Anbar və topdan satış</h3><p data-i18n="sec4.d">Terminalla qəbul və sayım, yerdəyişmə, kontragent borcları.</p><div class="tags"><span data-i18n="sec4.tag0">TSD</span><span data-i18n="sec4.tag1">Borclar</span></div></li>
-<li class="sector"><h3 data-i18n="sec5.t">Onlayn satış</h3><p data-i18n="sec5.d">Sayt və Shopify ilə qalıq, qiymət və sifariş mübadiləsi.</p><div class="tags"><span data-i18n="sec5.tag0">Shopify</span><span data-i18n="sec5.tag1">API</span></div></li>
-    </ul>
+    <div class="head"><div><h2>Hazır həllər — sizin biznesə uyğunlaşdırılmış</h2><p class="lead">Hər modul 1C-yə birbaşa bağlıdır: məlumat bir dəfə daxil olur, hər yerdə görünür.</p></div></div>
+    <div class="grid" id="sol"></div>
+    <div class="sectors" aria-label="Sahələr"><span>Marketlər</span><span>Restoran və kafelər</span><span>Apteklər</span><span>Anbar və topdan satış</span><span>Əyləncə mərkəzləri</span><span>İstehsal</span><span>Onlayn mağazalar</span></div>
   </div>
 </section>
 
-<section class="sec sec-ink on-ink" id="proses">
-  <div class="wrap">
-    <div class="sec-head"><h2 data-i18n="p.h">Necə işləyirik.</h2><p data-i18n="p.p">Əvvəl prosesi başa düşürük, sonra sistemi qururuq. Məqsəd çox funksiya deyil — düzgün işləyən funksiyadır.</p></div>
-    <ol class="steps"><li><h3 data-i18n="st0.t">Analiz</h3><p data-i18n="st0.d">Mövcud proqramı, avadanlığı və iş axınını öyrənib ehtiyacları müəyyən edirik.</p></li><li><h3 data-i18n="st1.t">Plan</h3><p data-i18n="st1.d">1C, kassa, server, anbar və API arasında əlaqəni planlaşdırırıq.</p></li><li><h3 data-i18n="st2.t">Qurulma</h3><p data-i18n="st2.d">Proqram və avadanlığı bir məlumat axınında birləşdiririk.</p></li><li><h3 data-i18n="st3.t">Test</h3><p data-i18n="st3.d">Real ssenarilərlə yoxlayır, səhvləri düzəldir, işçiləri öyrədirik.</p></li><li><h3 data-i18n="st4.t">Dəstək</h3><p data-i18n="st4.d">İşləyən sistemi uzaqdan izləyir və lazım olanda dərhal kömək edirik.</p></li></ol>
-  </div>
-</section>
-
-<section class="sec" id="sorgu">
-  <div class="wrap">
-    <div class="sec-head"><h2 data-i18n="q.h">Sorğunuzu bir dəqiqəyə hazırlayın.</h2><p data-i18n="q.p">Nə lazım olduğunu seçin — yanda sorğu çeki yaranır. Göndərəndə o, WhatsApp-da bizə çatır, qiyməti cavabda yazırıq.</p></div>
-    <div class="quote">
-  <form id="quoteForm" novalidate>
-    <fieldset><legend data-i18n="q.l1">Biznesiniz</legend><div class="chips"><label class="chip"><input type="radio" name="biz" value="market" checked><span data-i18n="q.biz.market">Market və mağaza</span></label><label class="chip"><input type="radio" name="biz" value="aptek"><span data-i18n="q.biz.aptek">Aptek</span></label><label class="chip"><input type="radio" name="biz" value="restoran"><span data-i18n="q.biz.restoran">Restoran və kafe</span></label><label class="chip"><input type="radio" name="biz" value="anbar"><span data-i18n="q.biz.anbar">Anbar və topdan</span></label><label class="chip"><input type="radio" name="biz" value="online"><span data-i18n="q.biz.online">Onlayn mağaza</span></label><label class="chip"><input type="radio" name="biz" value="other"><span data-i18n="q.biz.other">Digər</span></label></div></fieldset>
-    <fieldset><legend data-i18n="q.l2">Nə lazımdır?</legend><div class="chips"><label class="chip"><input type="checkbox" name="need" value="n1c"><span data-i18n="q.need.n1c">1C qurulması</span></label><label class="chip"><input type="checkbox" name="need" value="nkassa"><span data-i18n="q.need.nkassa">Vergi kassası inteqrasiyası</span></label><label class="chip"><input type="checkbox" name="need" value="npos"><span data-i18n="q.need.npos">POS və barkod</span></label><label class="chip"><input type="checkbox" name="need" value="ntsd"><span data-i18n="q.need.ntsd">Anbar terminalı</span></label><label class="chip"><input type="checkbox" name="need" value="nweb"><span data-i18n="q.need.nweb">Sayt və ya Shopify</span></label><label class="chip"><input type="checkbox" name="need" value="nmsg"><span data-i18n="q.need.nmsg">WhatsApp və Telegram bildirişləri</span></label><label class="chip"><input type="checkbox" name="need" value="nsrv"><span data-i18n="q.need.nsrv">Server və SQL</span></label><label class="chip"><input type="checkbox" name="need" value="ncare"><span data-i18n="q.need.ncare">Aylıq texniki dəstək</span></label></div></fieldset>
-    <fieldset><legend data-i18n="q.l3">Neçə cihaz?</legend>
-      <div class="counters">
-        <div class="counter"><label for="qKassa" data-i18n="q.kassa">Kassa</label><div><button type="button" data-step="-1" data-for="qKassa" aria-label="Azalt">−</button><input id="qKassa" type="number" inputmode="numeric" min="0" max="99" value="1"><button type="button" data-step="1" data-for="qKassa" aria-label="Artır">+</button></div></div>
-        <div class="counter"><label for="qTsd" data-i18n="q.tsd">Terminal</label><div><button type="button" data-step="-1" data-for="qTsd" aria-label="Azalt">−</button><input id="qTsd" type="number" inputmode="numeric" min="0" max="99" value="0"><button type="button" data-step="1" data-for="qTsd" aria-label="Artır">+</button></div></div>
-      </div>
-    </fieldset>
-    <fieldset><legend data-i18n="q.l4">Hazırda 1C istifadə edirsiniz?</legend><div class="chips"><label class="chip"><input type="radio" name="has1c" value="yes" checked><span data-i18n="q.has1c.yes">Bəli</span></label><label class="chip"><input type="radio" name="has1c" value="no"><span data-i18n="q.has1c.no">Xeyr</span></label><label class="chip"><input type="radio" name="has1c" value="unk"><span data-i18n="q.has1c.unk">Bilmirəm</span></label></div></fieldset>
-    <fieldset><legend data-i18n="q.l5">Əlaqə</legend>
-      <div class="fields">
-        <div class="field"><label for="qName" data-i18n="f.name">Ad</label><input id="qName" autocomplete="name" placeholder="Adınız" data-i18n-ph="f.name.ph"></div>
-        <div class="field"><label for="qPhone" data-i18n="f.phone">Telefon</label><input id="qPhone" type="tel" autocomplete="tel" placeholder="+994 __ ___ __ __"></div>
-        <div class="field full"><label for="qNote" data-i18n="f.note">Əlavə qeyd</label><textarea id="qNote" placeholder="Məsələn: 2 filial, mövcud kassa OneClick" data-i18n-ph="q.note.ph"></textarea></div>
-      </div>
-    </fieldset>
-    <div class="actions"><button class="btn btn-primary" type="submit"><span data-i18n="q.send">Sorğunu WhatsApp-da göndərin</span></button><button class="btn btn-ghost" type="button" id="quoteCopy"><span data-i18n="q.copy">Mətni kopyalayın</span></button></div>
-  </form>
-  <aside class="quote-side" aria-label="Sorğu çeki">
-    <div class="receipt flat">
-    <div class="receipt-paper">
-      <div class="rc-head"><strong data-i18n="q.rc.title">SORĞU ÇEKİ</strong><span>BarkodPRO</span></div>
-      <hr class="rc-sep">
-      <div class="rc-row"><span data-i18n="rc.date2">Tarix</span><span data-today>—</span></div>
-      <div class="rc-row"><span data-i18n="q.rc.biz">Biznes</span><span id="rcBiz">—</span></div>
-      <hr class="rc-sep">
-      <ul class="rc-items" id="rcNeeds"></ul>
-      <hr class="rc-sep">
-      <div class="rc-row"><span data-i18n="q.kassa2">Kassa</span><span id="rcKassa">1</span></div>
-      <div class="rc-row"><span data-i18n="q.tsd2">Terminal</span><span id="rcTsd">0</span></div>
-      <div class="rc-row">1C<span id="rcHas">—</span></div>
-      <div class="rc-row"><span data-i18n="rc.client2">Müştəri</span><span id="rcName">—</span></div>
-      <hr class="rc-sep">
-      <div class="rc-total"><span data-i18n="q.rc.price">QİYMƏT</span><span data-i18n="q.rc.reply">cavabda</span></div>
-      <svg class="rc-bar" viewBox="0 0 110 58" preserveAspectRatio="none" role="img" aria-label="Barkod"><g fill="#1d1f22"><rect x="10" y="0" width="2" height="58"/><rect x="13" y="0" width="1" height="58"/><rect x="16" y="0" width="1" height="58"/><rect x="21" y="0" width="2" height="58"/><rect x="24" y="0" width="3" height="58"/><rect x="28" y="0" width="1" height="58"/><rect x="32" y="0" width="1" height="58"/><rect x="36" y="0" width="3" height="58"/><rect x="40" y="0" width="2" height="58"/><rect x="43" y="0" width="2" height="58"/><rect x="48" y="0" width="1" height="58"/><rect x="50" y="0" width="3" height="58"/><rect x="54" y="0" width="2" height="58"/><rect x="57" y="0" width="1" height="58"/><rect x="61" y="0" width="1" height="58"/><rect x="65" y="0" width="2" height="58"/><rect x="68" y="0" width="3" height="58"/><rect x="72" y="0" width="3" height="58"/><rect x="76" y="0" width="1" height="58"/><rect x="78" y="0" width="3" height="58"/><rect x="82" y="0" width="4" height="58"/><rect x="87" y="0" width="2" height="58"/><rect x="92" y="0" width="3" height="58"/><rect x="96" y="0" width="1" height="58"/><rect x="98" y="0" width="2" height="58"/></g></svg>
-      <div class="rc-foot"><span data-i18n="q.rc.foot">Cavabı WhatsApp-da yazırıq</span></div>
-    </div></div>
-    <p data-i18n="q.side" class="note">Qiyməti seçdiyiniz xidmətlərə və cihaz sayına görə hazırlayırıq.</p>
-  </aside>
-</div>
-  </div>
-</section>
-
-<section class="sec sec-paper" id="destek">
-  <div class="wrap">
-    <div class="sec-head"><h2 data-i18n="sup.h">Problem olanda iş dayanmasın.</h2><p data-i18n="sup.p">1C, POS, SQL və inteqrasiya problemlərini uzaqdan yoxlayıb onlayn həll edirik.</p></div>
-    <div class="support">
-      <article class="panel">
-        <h3 data-i18n="sup.a.h">AnyDesk ilə uzaqdan dəstək</h3>
-        <p data-i18n="sup.a.p">Kompüterinizə qoşulub problemi birlikdə həll edək. Üç addım kifayətdir:</p>
-        <ol class="numbered"><li data-i18n="sup.a.1">AnyDesk-i rəsmi saytdan yükləyin və açın.</li><li data-i18n="sup.a.2">Ekrandakı ID-ni WhatsApp-da bizə göndərin.</li><li data-i18n="sup.a.3">Qoşulma sorğusunu qəbul edin.</li></ol>
-        <div class="actions"><a class="btn btn-ink" href="https://anydesk.com/az/downloads" target="_blank" rel="noopener"><span data-i18n="sup.a.b1">AnyDesk-i yükləyin</span></a><a class="btn btn-ghost" href="https://wa.me/994516782878?text=Salam%2C%20uzaqdan%20d%C9%99st%C9%99k%20laz%C4%B1md%C4%B1r.%20AnyDesk%20ID%3A%20" target="_blank" rel="noopener"><span data-i18n="sup.a.b2">ID-ni göndərin</span></a></div>
-      </article>
-      <article class="panel">
-        <h3 data-i18n="sup.c.h">Aylıq dəstək müqaviləsi</h3>
-        <p data-i18n="sup.c.p">Hər gün işləyən sistemlər üçün davamlı texniki nəzarət və təkmilləşdirmə.</p>
-        <ul class="checks"><li data-i18n="sup.c.c.0">Aylıq texniki müşayiət</li><li data-i18n="sup.c.c.1">Fasiləsiz əlaqə kanalı</li><li data-i18n="sup.c.c.2">Yeni hesabat və düzəlişlər</li><li data-i18n="sup.c.c.3">İnteqrasiyalara nəzarət</li></ul>
-        <a class="btn btn-ink" href="https://wa.me/994516782878?text=Salam%2C%20ayl%C4%B1q%20texniki%20d%C9%99st%C9%99k%20m%C3%BCqavil%C9%99si%20haqq%C4%B1nda%20m%C9%99lumat%20almaq%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener"><span data-i18n="sup.c.b">Müqavilə haqqında yazın</span></a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="faq">
-  <div class="wrap">
-    <div class="sec-head"><h2 data-i18n="faq.h">Tez-tez soruşulanlar.</h2><p data-i18n="faq.p">Cavabını tapmadığınız sual varsa, WhatsApp-a yazın.</p></div>
-    <div class="faq"><details><summary data-i18n="fq0.q">1C sistemini mövcud mağazaya qoşmaq olar?</summary><p data-i18n="fq0.a">Bəli. Əvvəlcə mövcud 1C quruluşunu, POS-u, vergi kassasını və anbar avadanlığını öyrənir, sonra uyğun inteqrasiya modelini qururuq.</p></details><details><summary data-i18n="fq1.q">Vergi kassası ilə 1C arasında məlumatı ayrıca yazmaq lazımdır?</summary><p data-i18n="fq1.a">Xeyr. İnteqrasiyanın məqsədi budur: satış kassa ilə proqram arasında avtomatik ötürülür, təkrar daxiletmə olmur.</p></details><details><summary data-i18n="fq2.q">Shopify və başqa saytlarla işləyirsiniz?</summary><p data-i18n="fq2.a">Bəli. API vasitəsilə məhsul, qalıq, qiymət və sifariş axınları qurulur. Konkret imkanlar platformanın API-sindən asılıdır.</p></details><details><summary data-i18n="fq3.q">Uzaqdan dəstək necə işləyir?</summary><p data-i18n="fq3.a">AnyDesk-i rəsmi saytdan yükləyirsiniz və ekrandakı ID-ni bizə göndərirsiniz. Siz qoşulmanı təsdiqləyəndən sonra problemi yoxlayırıq.</p></details><details><summary data-i18n="fq4.q">Anbar terminalı üçün hansı cihaz lazımdır?</summary><p data-i18n="fq4.a">Daxili skaneri olan Android terminal və ya adi Android telefon. Telefonda barkod kamera ilə oxunur.</p></details><details><summary data-i18n="fq5.q">Demo panel nədir?</summary><p data-i18n="fq5.a">Kassa, anbar, sayım və hesabatların necə işlədiyini göstərən sınaq panelidir. İstənilən giriş və parolla daxil olmaq olar.</p></details></div>
-  </div>
-</section>
-
-<section class="sec sec-ink contact on-ink" id="elaqe">
-  <div class="wrap">
-    <h2 data-i18n="ct.h">Sisteminizi birlikdə quraq.</h2>
-    <p data-i18n="ct.lead" class="lead">Layihənizi qısaca yazın — hansı proqram, kassa və avadanlıq olduğunu öyrənib təklif hazırlayaq.</p>
-    <div class="contact-grid">
-      <ul class="c-list">
-        <li><span data-i18n="c.tel">Telefon</span><a href="tel:+994516782878">+994 51 678 28 78</a></li>
-        <li><span>WhatsApp</span><a href="https://wa.me/994516782878?text=Salam%2C%20BarkodPRO%20haqq%C4%B1nda%20m%C9%99lumat%20almaq%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener" data-i18n="c.wa">Yazışmağa başlayın</a></li>
-        <li><span>Telegram</span><a href="https://t.me/k1r1pt0n" target="_blank" rel="noopener">@k1r1pt0n</a></li>
-        <li><span data-i18n="c.addr">Ünvan</span><strong data-i18n="c.addr.v">Şamaxı, Azərbaycan</strong></li>
-        <li><span data-i18n="c.hours">İş rejimi</span><strong data-i18n="c.hours.v">24/7 texniki dəstək</strong></li>
+<section class="band mob" id="mobil">
+  <div class="wrap mob-g">
+    <div>
+      <span class="kick v">Yeni · Mobil İzləmə BarkodPRO</span>
+      <h2>Mağazanız telefonunuzda — 1C-dən canlı</h2>
+      <p class="lead">Bu günün satışı, qazanc, kassalar, anbar qalığı və borclar bir toxunuşla. Telefondan kassa sənədi yaradın, sənədləri keçirin, barkodu kamera ilə oxudub malın qalığına baxın.</p>
+      <ul class="mob-l">
+        <li><b>24</b> bölmə və hesabat</li><li><b>Çox mağaza</b> bir proqramda</li><li><b>İmzalı</b> təhlükəsiz bağlantı</li><li><b>Android + iPhone</b> tətbiq və brauzer</li>
       </ul>
-      <form id="contactForm">
-        <div class="field"><label for="cName" data-i18n="f.name">Ad</label><input id="cName" autocomplete="name" placeholder="Adınız" data-i18n-ph="f.name.ph2"></div>
-        <div class="field"><label for="cPhone" data-i18n="f.phone">Telefon</label><input id="cPhone" type="tel" autocomplete="tel" placeholder="+994 __ ___ __ __"></div>
-        <div class="field"><label for="cMsg" data-i18n="c.msg">Nə ilə kömək edək?</label><textarea id="cMsg" placeholder="Məsələn: mağazada 1C və vergi kassası inteqrasiyası" data-i18n-ph="c.msg.ph"></textarea></div>
-        <div><button class="btn btn-primary" type="submit"><span data-i18n="c.send">WhatsApp-da göndərin</span></button></div>
-      </form>
+      <div class="cta"><a class="btn v" href="mobil-izleme.html">Canlı demoya bax →</a><a class="btn o" href="https://wa.me/994516782878?text=Salam%2C%20Mobil%20%C4%B0zl%C9%99m%C9%99%20BarkodPRO%20il%C9%99%20maraqlan%C4%B1ram." target="_blank" rel="noopener">Qiymət soruş</a></div>
     </div>
+    <a class="mini" href="mobil-izleme.html" aria-label="Mobil İzləmə səhifəsinə keç">
+      <div class="mini-s">
+        <div class="mini-h"><b>Mobil İzləmə</b><span>● Bağlıdır</span></div>
+        <div class="mini-3" id="mobSt"></div>
+        <div class="mini-c" id="mobRows"></div>
+        <div class="mini-btn">+ Yeni kassa sənədi</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="band" id="xidmetler">
+  <div class="wrap">
+    <div class="head"><div><h2>Nə edirik</h2><p class="lead">Kiçik düzəlişdən tam avtomatlaşdırmaya qədər — işi əvvəlcə bazanın surətində edir, sonra işçi bazaya keçiririk.</p></div></div>
+    <div class="grid" id="svc"></div>
+  </div>
+</section>
+
+<section class="band dark" id="inteqrasiya">
+  <span id="sistem"></span>
+  <div class="wrap int-g">
+    <div>
+      <h2>1C-də istənilən düzəliş və inteqrasiya</h2>
+      <p class="lead">Hazır konfiqurasiya işinizə tam uyğun gəlmirsə, 1C-ni sizə uyğunlaşdırırıq — sizi 1C-yə yox. Kodu özümüz yazırıq, əvvəlcə bazanın surətində yoxlayırıq.</p>
+      <div class="int-l" id="intL"></div>
+      <div class="cta"><a class="btn r" href="#elaqe" data-need="1C-də düzəliş / hesabat">Tapşırığı yaz</a><a class="btn o" href="#elaqe" data-need="İnteqrasiya">İnteqrasiya lazımdır</a></div>
+    </div>
+    <div class="console code">
+      <div class="qbar"><i></i><i></i><i></i><span id="ct">Konfiqurator — modul</span></div>
+      <div class="qtabs" id="ctabs" role="tablist" aria-label="Kod nümunələri"></div>
+      <pre class="qcode" id="ccode"></pre>
+      <div class="qfoot"><span id="cdesc"></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="aletler">
+  <div class="wrap">
+    <div class="head"><div><h2>Faydalı alətlər — pulsuz</h2><p class="lead">Mühasib, kassir və mağaza sahibi üçün gündəlik hesablamalar. Hamısı brauzerdə işləyir, heç bir məlumat göndərilmir.</p></div></div>
+    <div class="ttabs" id="ttabs" role="tablist" aria-label="Alətlər">
+      <button type="button" role="tab" data-t="maas" aria-selected="true">Maaş</button>
+      <button type="button" role="tab" data-t="edv" aria-selected="false">ƏDV</button>
+      <button type="button" role="tab" data-t="qiymet" aria-selected="false">Qiymət və marja</button>
+      <button type="button" role="tab" data-t="endirim" aria-selected="false">Endirim və aksiya</button>
+      <button type="button" role="tab" data-t="barkod" aria-selected="false">Barkod generatoru</button>
+      <button type="button" role="tab" data-t="terezi" aria-selected="false">Tərəzi barkodu</button>
+      <button type="button" role="tab" data-t="kassa" aria-selected="false">Kassa sayımı</button>
+      <button type="button" role="tab" data-t="dovr" aria-selected="false">Mal dövriyyəsi</button>
+    </div>
+
+    <div class="tpanel calc" data-p="maas">
+      <div class="form">
+        <div class="seg" role="radiogroup" aria-label="Hesablama istiqaməti"><label><input type="radio" name="sdir" value="g" checked>Hesablanan → əlinə çatan</label><label><input type="radio" name="sdir" value="n">Əlinə çatan → hesablanan</label></div>
+        <div><label for="sAmt" id="sLbl">Hesablanan əmək haqqı, ₼</label><input id="sAmt" type="number" inputmode="decimal" min="0" step="0.01" value="1000"></div>
+        <div class="two">
+          <div><label for="sYear">Dövr</label><select id="sYear"><option value="0">2026</option><option value="1">2027</option><option value="2">2028 və sonra</option></select></div>
+          <div><label for="sMain">İş yeri</label><select id="sMain"><option value="1">Əsas iş yeri</option><option value="0">Əlavə iş yeri</option></select></div>
+        </div>
+        <p class="hint">Qeyri-neft-qaz, özəl sektor üçün 2026-cı il qaydaları ilə hesablanır. Nəticə təxminidir, rəsmi hesablama 1C-də və ya mühasibdə aparılır.</p>
+      </div>
+      <div class="out">
+        <span id="sBigL">Əlinə çatan</span><div class="big" id="sBig">—</div>
+        <div id="sRows"></div>
+      </div>
+    </div>
+
+    <div class="tpanel calc" data-p="edv" hidden>
+      <div class="form">
+        <div class="seg" role="radiogroup" aria-label="ƏDV rejimi"><label><input type="radio" name="vdir" value="in" checked>Məbləğə ƏDV daxildir</label><label><input type="radio" name="vdir" value="out">ƏDV-ni üstünə gəl</label></div>
+        <div class="two">
+          <div><label for="vAmt">Məbləğ, ₼</label><input id="vAmt" type="number" inputmode="decimal" min="0" step="0.01" value="118"></div>
+          <div><label for="vRate">Dərəcə, %</label><input id="vRate" type="number" inputmode="decimal" min="0" step="0.5" value="18"></div>
+        </div>
+      </div>
+      <div class="out"><span>ƏDV məbləği</span><div class="big" id="vBig">—</div><div id="vRows"></div></div>
+    </div>
+
+    <div class="tpanel calc" data-p="qiymet" hidden>
+      <div class="form">
+        <div><label for="pCost">Maya dəyəri (alış qiyməti), ₼</label><input id="pCost" type="number" inputmode="decimal" min="0" step="0.01" value="8"></div>
+        <div class="seg" role="radiogroup" aria-label="Nəyi bilirsiniz"><label><input type="radio" name="pdir" value="mk" checked>Əlavə %</label><label><input type="radio" name="pdir" value="mg">Marja %</label><label><input type="radio" name="pdir" value="pr">Satış qiyməti</label></div>
+        <div><label for="pVal" id="pLbl">Əlavə (natsenka), %</label><input id="pVal" type="number" inputmode="decimal" min="0" step="0.01" value="25"></div>
+        <p class="hint">Əlavə maya dəyərindən, marja isə satış qiymətindən hesablanır: 25% əlavə = 20% marja.</p>
+      </div>
+      <div class="out"><span>Satış qiyməti</span><div class="big" id="pBig">—</div><div id="pRows"></div></div>
+    </div>
+
+    <div class="tpanel calc" data-p="endirim" hidden>
+      <div class="form">
+        <div class="two">
+          <div><label for="dCost">Maya dəyəri, ₼</label><input id="dCost" type="number" inputmode="decimal" min="0" step="0.01" value="8"></div>
+          <div><label for="dPrice">Adi satış qiyməti, ₼</label><input id="dPrice" type="number" inputmode="decimal" min="0" step="0.01" value="12"></div>
+        </div>
+        <div class="seg" role="radiogroup" aria-label="Aksiya növü"><label><input type="radio" name="ddir" value="pct" checked>Endirim %</label><label><input type="radio" name="ddir" value="xy">X al — Y pulsuz</label></div>
+        <div class="two">
+          <div><label for="dVal" id="dLbl">Endirim, %</label><input id="dVal" type="number" inputmode="decimal" min="0" step="0.5" value="15"></div>
+          <div id="dYw" hidden><label for="dY">Pulsuz verilən, ədəd</label><input id="dY" type="number" inputmode="numeric" min="1" step="1" value="1"></div>
+        </div>
+        <p class="hint">Aksiyadan sonra 1 ədəddən qalan qazancı və eyni qazancı saxlamaq üçün nə qədər çox satmaq lazım olduğunu göstərir.</p>
+      </div>
+      <div class="out"><span>Aksiya qiyməti (1 ədəd)</span><div class="big" id="dBig">—</div><div id="dRows"></div></div>
+    </div>
+
+    <div class="tpanel calc" data-p="barkod" hidden>
+      <div class="form">
+        <div><label for="bIn">EAN-13: 12 rəqəm yazın, sonuncunu hesablayaq (13 yazsanız yoxlayaq)</label><input id="bIn" inputmode="numeric" maxlength="13" value="476000123456" autocomplete="off"></div>
+        <div class="cta" style="margin-top:0"><button class="btn o" type="button" id="bRnd">Daxili barkod yarat (20…)</button></div>
+        <p class="hint">20–29 ilə başlayan kodlar mağazadaxili mallar üçündür. Rəsmi GS1 kodu almaq lazımdırsa, kömək edirik.</p>
+        <div id="bMsg" class="hint"></div>
+      </div>
+      <div class="out light"><span>Barkod</span><div class="bbox" id="bSvg"></div>
+        <div class="cta" style="margin-top:6px"><a class="btn r" id="bDl" download="barkod.svg" href="#">SVG yüklə</a><button class="btn o" type="button" id="bCp">Rəqəmləri kopyala</button></div></div>
+    </div>
+
+    <div class="tpanel calc" data-p="terezi" hidden>
+      <div class="form">
+        <div><label for="wIn">Tərəzi etiketindəki barkod (13 rəqəm)</label><input id="wIn" inputmode="numeric" maxlength="13" value="2200123012500" autocomplete="off"></div>
+        <div class="two">
+          <div><label for="wFmt">Format</label><select id="wFmt"><option value="w">PP KKKKK ÇÇÇÇÇ K — çəki (qram)</option><option value="p">PP KKKKK MMMMM K — məbləğ (qəpik)</option></select></div>
+          <div><label for="wPrice">1 kq qiyməti, ₼ (istəyə görə)</label><input id="wPrice" type="number" inputmode="decimal" min="0" step="0.01" value="9.80"></div>
+        </div>
+        <p class="hint">Tərəzi barkodunun formatı tərəzinin ayarından asılıdır. 1C-də də eyni format qurulmalıdır — biz bunu sazlayırıq.</p>
+      </div>
+      <div class="out"><span id="wBigL">Çəki</span><div class="big" id="wBig">—</div><div id="wRows"></div></div>
+    </div>
+
+    <div class="tpanel calc" data-p="kassa" hidden>
+      <div class="form">
+        <div class="cash" id="cash"></div>
+        <div class="two">
+          <div><label for="cExp">1C-yə görə kassada olmalıdır, ₼</label><input id="cExp" type="number" inputmode="decimal" min="0" step="0.01" placeholder="məs. 1250.40"></div>
+          <div style="align-self:end"><button class="btn o" type="button" id="cClr" style="width:100%">Sıfırla</button></div>
+        </div>
+      </div>
+      <div class="out"><span>Kassada sayılan</span><div class="big" id="cBig">—</div><div id="cRows"></div></div>
+    </div>
+
+    <div class="tpanel calc" data-p="dovr" hidden>
+      <div class="form">
+        <div class="two">
+          <div><label for="tStock">Orta qalıq (maya ilə), ₼</label><input id="tStock" type="number" inputmode="decimal" min="0" step="1" value="45000"></div>
+          <div><label for="tCogs">Dövrdə satılanın mayası, ₼</label><input id="tCogs" type="number" inputmode="decimal" min="0" step="1" value="60000"></div>
+        </div>
+        <div class="two">
+          <div><label for="tDays">Dövr, gün</label><input id="tDays" type="number" inputmode="numeric" min="1" step="1" value="30"></div>
+          <div><label for="tLead">Tədarük müddəti, gün</label><input id="tLead" type="number" inputmode="numeric" min="0" step="1" value="5"></div>
+        </div>
+        <p class="hint">Mal neçə günə satılıb qurtarır və pul anbarda nə qədər "yatır". Hər iki rəqəm 1C-dəki partiya və satış hesabatlarından götürülür.</p>
+      </div>
+      <div class="out"><span>Dövriyyə müddəti</span><div class="big" id="tBig">—</div><div id="tRows"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band dark" id="musayiet">
+  <div class="wrap">
+    <div class="head"><div><h2>Aylıq müşayiət paketləri</h2><p class="lead">Proqramçı axtarmağa vaxt itirmirsiniz: problem yarananda kimə zəng edəcəyinizi bilirsiniz.</p></div></div>
+    <div class="tiers" id="tiers"></div>
+    <p class="note">Bütün paketlərdə: yeniləmələr surətdə yoxlanılır, ehtiyat nüsxələr bərpa üçün test edilir, görülən işlər üzrə hesabat verilir, mühəndislərlə ümumi çat açılır. İstifadə olunmamış saatlar növbəti aya keçir.</p>
+  </div>
+</section>
+
+<section class="band" id="kalkulyator">
+  <div class="wrap">
+    <div class="head"><div><h2>Müşayiət xərcini hesablayın</h2><p class="lead">Təxmini hesabdır — dəqiq qiyməti bazaya baxandan sonra deyirik.</p></div></div>
+    <div class="calc">
+      <div class="form">
+        <div><label for="cfg">Konfiqurasiya</label>
+          <select id="cfg"><option value="1">Ticarətin idarə edilməsi (УТ)</option><option value="1">Pərakəndə (Розница)</option><option value="1.2">Mühasibat</option><option value="1.4">Kompleks avtomatlaşdırma / ERP</option><option value="1.1">Restoran / BarkodPRO kassa</option><option value="1">Digər / fərdi baza</option></select></div>
+        <div><label for="usr">İstifadəçi sayı: <span id="usrv">5</span></label><input id="usr" type="range" min="1" max="60" value="5"></div>
+        <div><label for="pts">Satış nöqtəsi / mağaza sayı: <span id="ptsv">1</span></label><input id="pts" type="range" min="1" max="20" value="1"></div>
+        <div><label>İnteqrasiyalar</label>
+          <div class="chips" id="int"></div></div>
+      </div>
+      <div class="out" aria-live="polite">
+        <span>Tövsiyə olunan paket</span>
+        <div class="big" id="res">—</div>
+        <div class="row"><span>Paket</span><b id="rt">—</b></div>
+        <div class="row"><span>Ayda saat</span><b id="rh">—</b></div>
+        <div class="row"><span>Təcili reaksiya</span><b id="rr">—</b></div>
+        <a class="btn r" href="#elaqe" id="calcGo" style="margin-top:10px">Bu paketlə müraciət et</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt">
+  <div class="wrap">
+    <div class="head"><h2>Layihə necə gedir</h2></div>
+    <div class="steps" id="steps"></div>
+  </div>
+</section>
+
+<section class="band" id="sual">
+  <div class="wrap">
+    <div class="head"><h2>Tez-tez verilən suallar</h2></div>
+    <div class="faq" id="faq"></div>
+  </div>
+</section>
+
+<section class="band alt" id="elaqe"><span id="sorgu"></span><span id="destek"></span>
+  <div class="wrap contact">
+    <div>
+      <h2>Tapşırığı yazın — 1 iş günü ərzində cavab veririk</h2>
+      <p class="lead">Və ya birbaşa yazın: WhatsApp və Telegram-da daha tez cavab alırsınız.</p>
+      <div class="ways">
+        <a class="way" href="tel:+994516782878"><div class="ico"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div><div><b>051 678 28 78</b><span>Zəng — texniki dəstək 24/7</span></div></a>
+        <a class="way" href="https://wa.me/994516782878" target="_blank" rel="noopener"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21l1.6-4.6A9 9 0 1 1 8 20z"/></svg></div><div><b>WhatsApp</b><span>+994 51 678 28 78</span></div></a>
+        <a class="way" href="https://t.me/k1r1pt0n" target="_blank" rel="noopener"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 8-6"/></svg></div><div><b>Telegram</b><span>@k1r1pt0n</span></div></a>
+      </div>
+    </div>
+    <form class="form" id="frm" novalidate>
+      <div class="two">
+        <div><label for="fn">Adınız *</label><input id="fn" required autocomplete="name"></div>
+        <div><label for="fp">Telefon / WhatsApp *</label><input id="fp" required type="tel" inputmode="tel" placeholder="+994 __ ___ __ __" autocomplete="tel"></div>
+      </div>
+      <div class="two">
+        <div><label for="fc">Şirkət</label><input id="fc" autocomplete="organization"></div>
+        <div><label for="ft">Müraciət növü</label><select id="ft"><option>Yeni sistem / tətbiq</option><option>Kassa və e-kassa</option><option>Anbar terminalı</option><option>Mobil İzləmə</option><option>1C-də düzəliş / hesabat</option><option>İnteqrasiya</option><option>Aylıq müşayiət</option><option>Server / IT</option><option>Digər</option></select></div>
+      </div>
+      <div><label for="fm">Tapşırığın qısa təsviri</label><textarea id="fm" placeholder="Məsələn: 3 mağaza, 1 anbar, kassalar e-kassaya qoşulmalıdır…"></textarea></div>
+      <label class="chk"><input type="checkbox" id="fa">Məlumatlarımın müraciətə cavab vermək üçün istifadə olunmasına razıyam.</label>
+      <div class="ok-msg" id="okm"></div>
+      <div class="cta" style="margin-top:0">
+        <button class="btn r" type="submit" data-to="wa">WhatsApp ilə göndər</button>
+        <button class="btn o" type="submit" data-to="tg">Telegram ilə göndər</button>
+      </div>
+    </form>
   </div>
 </section>
 </main>
-<footer class="site-foot on-ink">
-  <div class="wrap foot-row">
-    <a class="logo" href="index.html" aria-label="BarkodPRO — ana səhifə"><span class="logo-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><g fill="#FFC72C"><rect x="2" y="3" width="2" height="14"/><rect x="5.5" y="3" width="1" height="14"/><rect x="8" y="3" width="2.5" height="14"/><rect x="12" y="3" width="1" height="14"/><rect x="14.5" y="3" width="1.6" height="14"/><rect x="17.2" y="3" width="1" height="14"/></g></svg></span><span>Barkod<b>PRO</b></span></a>
-    <nav aria-label="Alt menyu"><a href="#xidmetler" data-i18n="nav.services">Xidmətlər</a><a href="anbar-terminal.html" data-i18n="nav.terminal">Anbar Terminal</a><a href="#sorgu" data-i18n="nav.quote">Sorğu</a><a href="#destek" data-i18n="nav.support">Dəstək</a><a href="login.html" data-i18n="nav.login">Müştəri girişi</a></nav>
-    <p>© <span data-year>2026</span> BarkodPRO. <span data-i18n="foot.rights">Şamaxı, Azərbaycan</span></p>
+
+<footer class="dark">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="logo" href="#top" style="color:#fff;padding:0"><span>Barkod<b>PRO</b></span></a>
+        <p style="color:#a6a9ae;margin-top:10px;max-width:42ch">1C əsasında kassa, anbar və hesabat həlləri, inteqrasiyalar və texniki müşayiət. Şamaxı, Azərbaycan — uzaqdan bütün ölkə üzrə.</p>
+      </div>
+      <div><h3>Bölmələr</h3><a href="#heller">Həllər</a><a href="#xidmetler">Xidmətlər</a><a href="#inteqrasiya">1C düzəliş və inteqrasiya</a><a href="#aletler">Faydalı alətlər</a><a href="#musayiet">Müşayiət</a><a href="#kalkulyator">Kalkulyator</a><a href="#sual">Suallar</a></div>
+      <div><h3>Əlaqə</h3><a href="tel:+994516782878">051 678 28 78</a><a href="https://wa.me/994516782878" target="_blank" rel="noopener">WhatsApp</a><a href="https://t.me/k1r1pt0n" target="_blank" rel="noopener">Telegram: @k1r1pt0n</a><a href="mobil-izleme.html">Mobil İzləmə</a><a href="anbar-terminal.html">Anbar Terminal</a><a href="login.html">Müştəri girişi</a><a href="#elaqe">Texniki dəstək 24/7</a></div>
+    </div>
+    <div class="legal"><span>© <span id="yr">2026</span> BarkodPRO. Bütün hüquqlar qorunur.</span><span>«1C» — 1C şirkətinin ticarət nişanıdır. BarkodPRO müstəqil tərtibatçıdır.</span></div>
   </div>
 </footer>
-<a class="fab" href="https://wa.me/994516782878?text=Salam%2C%20BarkodPRO%20haqq%C4%B1nda%20m%C9%99lumat%20almaq%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-1 .8a3.5 3.5 0 0 1-2.1-2.1l.8-1-1-2z" fill="currentColor" stroke="none"/></svg></a>
-<div class="toast" role="status" aria-live="polite"></div>
-<script src="assets/js/i18n.js"></script>
-<script src="assets/js/site.js"></script>
+
+<a class="wa" href="https://wa.me/994516782878" target="_blank" rel="noopener" aria-label="WhatsApp-da yaz"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.3"/></svg></a>
+
+<script>
+{
+/* ===== Redaktə üçün: qiymətlər və mətnlər buradadır ===== */
+const PHONE='994516782878', TG='k1r1pt0n', RATE=25; // saat qiyməti, AZN
+const TIERS=[
+ {n:'Start',h:6,r:'2 saat',d:['Ayda 6 saat iş','Təcili reaksiya — 2 saat','Gündəlik ehtiyat nüsxə','İş günləri 9:00–19:00']},
+ {n:'Biznes',h:14,r:'30 dəqiqə',hot:1,d:['Ayda 14 saat iş','Təcili reaksiya — 30 dəqiqə','Hər 4 saatdan bir ehtiyat nüsxə','Şəxsi məsul mütəxəssis','Kassa və e-kassa monitorinqi']},
+ {n:'Korporativ',h:30,r:'15 dəqiqə, 24/7',d:['Ayda 30+ saat iş','Təcili reaksiya — 15 dəqiqə, 24/7','Server və SQL monitorinqi','Rübdə bir dəfə baza auditi','Yerində gəliş daxil']}
+];
+const ic={
+ pos:'<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 20h10M12 16v4"/>',
+ fis:'<path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"/><path d="M9 7h6M9 11h6M9 15h3"/>',
+ scan:'<path d="M4 7V4h3M17 4h3v3M20 17v3h-3M7 20H4v-3"/><path d="M8 8v8M11 8v8M14 8v8M17 8v8"/>',
+ phone:'<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/><path d="M9 13l2-3 2 2 2-4"/>',
+ food:'<path d="M5 3v8a3 3 0 0 0 6 0V3M8 3v18M16 3c-2 2-2 7 0 9v9"/>',
+ cart:'<path d="M3 4h2l2 11h11l2-8H6"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/>',
+ play:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ link:'<path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1"/><path d="M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1"/>',
+ gear:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>',
+ box:'<path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7M12 11v10"/>',
+ srv:'<rect x="3" y="3" width="18" height="7" rx="1.5"/><rect x="3" y="14" width="18" height="7" rx="1.5"/><path d="M7 6.5h.01M7 17.5h.01"/>',
+ edu:'<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>'
+};
+const SOL=[
+ ['pos','Web Kassa','İnternet kəsiləndə də satışı dayandırmayan kassa: offline növbə, növbə hesabatı, termal çek çapı.','Offline'],
+ ['fis','E-kassa inteqrasiyası','1C-dən fiskal cihaza birbaşa çek: satış, qaytarma, X/Z hesabatları. Bir neçə provayderlə işləyirik.'],
+ ['scan','Anbar Terminalı','Zebra TC20 kimi Android terminallarda barkodla qəbul, sayım, köçürmə. Məlumat dərhal 1C-yə düşür.','Android','anbar-terminal.html'],
+ ['phone','Mobil İzləmə BarkodPRO','Rəhbər üçün telefonda satış, qazanc, kassa, qalıq və borclar. Telefondan kassa sənədi, registrasiya, qiymət dəyişmə.','24 bölmə','mobil-izleme.html'],
+ ['food','Restoran və ofisiant sifarişi','Ofisiant telefondan masaya sifariş açır, sifariş 1C restoran modulunda və mətbəxdə görünür.'],
+ ['cart','Onlayn sifariş forması','Müştəri link ilə sifariş verir, sifariş birbaşa 1C-də sənəd kimi yaranır.'],
+ ['play','Uşaq əyləncə mərkəzi','Kartla giriş, tarif və uşaq sayı, canlı geri sayım siyahısı, çıxışda avtomatik çek.'],
+ ['link','Onlayn mağaza inteqrasiyası','Shopify və digər platformalarla qalıq, qiymət və sifariş sinxronizasiyası.']
+].map(([i,t,d,tag,url])=>({i,t,d,tag,url}));
+const SVC=[
+ ['box','Sıfırdan 1C qurulması','Konfiqurasiyanın seçilməsi, qalıqların köçürülməsi, kassaların və printerlərin qoşulması.'],
+ ['gear','1C-də düzəlişlər','Yeni hesabatlar, çap formaları, sənədlər, hüquqların ayrılması — sizin iş prosesinizə görə.'],
+ ['link','İnteqrasiyalar','E-kassa, bank, onlayn mağaza, terminallar, Telegram bildirişləri, HTTP servislər.'],
+ ['scan','Barkod və avadanlıq','Skaner, etiket printeri, çek printeri, tərəzi, terminal — seçirik, qoşuruq, sazlayırıq.'],
+ ['srv','Server və IT','Windows Server, SQL Server, IIS, uzaqdan iş masası, avtomatik ehtiyat nüsxələr.'],
+ ['edu','Kassir və operator təlimi','Yeni sistemə keçiddə işçilərə yerində və ya uzaqdan qısa, praktik təlim.']
+];
+const INT=['E-kassa','Anbar terminalı','Mobil İzləmə','Onlayn mağaza','Bank / ödəniş','Telegram bildirişləri'];
+const STEPS=[
+ ['Tanışlıq','Zəng və ya görüş: necə işləyirsiniz, nə mane olur.'],
+ ['Qiymət və plan','Yazılı tapşırıq, müddət və qiymət — işə başlamazdan əvvəl.'],
+ ['Surətdə işləmə','Hər şeyi bazanın surətində edirik, işçi baza toxunulmaz qalır.'],
+ ['İşə salma','Keçid, avadanlığın sazlanması və işçilərin təlimi.'],
+ ['Müşayiət','Sonrakı suallar, yeniləmələr və yeni istəklər.']
+];
+const FAQ=[
+ ['Uzaqdan işləyirsiniz, yoxsa gəlirsiniz?','Əksər işi uzaqdan görürük — daha tez olur. Avadanlıq qoşulması, təlim və ya server işləri üçün yerində gəlirik.'],
+ ['Başqasının yazdığı 1C bazası ilə işləyirsiniz?','Bəli. Əvvəlcə bazanı yoxlayırıq, nə edildiyini sənədləşdiririk, sonra müşayiətə götürürük.'],
+ ['Hansı e-kassa provayderləri ilə işləyirsiniz?','Bazarda istifadə olunan bir neçə provayderlə inteqrasiyamız var. Cihazınızın adını yazın — uyğunluğu dəqiqləşdirək.'],
+ ['Müşayiət olmadan bir dəfəlik iş sifariş etmək olar?','Olar. Saatlıq qiymətlə edirik, paket tələb olunmur.'],
+ ['Yazılan kod kimə məxsusdur?','Sizin bazanız üçün yazılan düzəlişlər sizin bazanızda qalır. Lisenziyalı modullarımızın şərtləri ayrıca razılaşdırılır.'],
+ ['Mobil İzləmə hansı telefonlarda işləyir?','Android üçün tətbiq var, iPhone-da isə brauzerdə açılır və ana ekrana ikon kimi əlavə olunur. Məlumat birbaşa sizin 1C bazanızdan gəlir. <a href="mobil-izleme.html">Ətraflı →</a>'],
+ ['Mövcud 1C bazama yeni hesabat və ya düzəliş edirsiniz?','Bəli — istənilən konfiqurasiyada: yeni hesabat, çap forması, sənəd, hüquqların ayrılması, xarici sistemlərlə inteqrasiya. Əvvəlcə tapşırığı yazılı razılaşdırırıq, işi bazanın surətində görürük.'],
+ ['İnternet kəsiləndə kassa işləyir?','Web Kassa offline rejimdə satışı davam etdirir, əlaqə bərpa olunanda çeklər avtomatik 1C-yə göndərilir.']
+];
+const $=s=>document.querySelector(s);
+const svg=k=>`<div class="ico"><svg viewBox="0 0 24 24">${ic[k]}</svg></div>`;
+$('#sol').innerHTML=SOL.map(s=>`<article class="card">${svg(s.i)}<h3>${s.t}</h3><p>${s.d}</p>${s.tag?`<span class="tag">${s.tag}</span>`:''}${s.url?`<a class="more" href="${s.url}">Ətraflı →</a>`:''}</article>`).join('');
+$('#svc').innerHTML=SVC.map(([i,t,d])=>`<article class="card">${svg(i)}<h3>${t}</h3><p>${d}</p></article>`).join('');
+$('#tiers').innerHTML=TIERS.map(t=>`<div class="tier${t.hot?' hot':''}"><h3>${t.n}</h3><div class="p">${t.h*RATE} <small>AZN / ay</small></div><ul>${t.d.map(x=>`<li>${x}</li>`).join('')}</ul><a class="btn ${t.hot?'r':'o'}" href="#elaqe" data-tier="${t.n}">Seç</a></div>`).join('');
+$('#int').innerHTML=INT.map((x,i)=>`<label class="chip"><input type="checkbox" value="${i}">${x}</label>`).join('');
+$('#steps').innerHTML=STEPS.map(([t,d])=>`<div class="step"><h3>${t}</h3><p>${d}</p></div>`).join('');
+$('#faq').innerHTML=FAQ.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('');
+$('#yr').textContent=new Date().getFullYear();
+
+/* mobil menyu */
+const bg=$('#burger'),dr=$('#drawer');
+bg.addEventListener('click',()=>{const o=dr.hidden;dr.hidden=!o;bg.setAttribute('aria-expanded',o)});
+dr.addEventListener('click',e=>{if(e.target.closest('a')){dr.hidden=true;bg.setAttribute('aria-expanded','false')}});
+
+/* gecə / gündüz rejimi */
+const root=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
+const isDark=()=>root.dataset.theme?root.dataset.theme==='dark':mq.matches;
+const sync=()=>root.classList.toggle('is-dark',isDark());
+try{const s=localStorage.getItem('bp-theme');if(s)root.dataset.theme=s}catch(_){}
+sync();try{mq.addEventListener('change',sync)}catch(_){try{mq.addListener(sync)}catch(__){}}
+new MutationObserver(sync).observe(root,{attributes:true,attributeFilter:['data-theme']});
+$('#thm').addEventListener('click',()=>{const t=isDark()?'light':'dark';root.dataset.theme=t;try{localStorage.setItem('bp-theme',t)}catch(_){}});
+
+/* sorğu konsolu — hər girişdə fərqli ssenari və fərqli rəqəmlər */
+const R=(a,b)=>a+Math.random()*(b-a), RI=(a,b)=>Math.floor(R(a,b+1)), pick=a=>a[RI(0,a.length-1)];
+const shuffle=a=>a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
+const money=v=>v.toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:2});
+const int=v=>v.toLocaleString('ru-RU');
+const FIRMS=['«Dəyirman» MMC','FŞ Səfərov','«ŞimalTrans» ASC','«Bakı Süd» MMC','FŞ Məmmədli','«Xəzər Qida» MMC','«Gəncə Un» ASC','«Lənkəran Çay» MMC','FŞ Hüseynov','«Abşeron Logistik» MMC'];
+const GOODS=[['Süd 3.2% 1L','4760001234'],['Çörək ağ','4760002211'],['Pendir ağ 250q','4760003390'],['Çay qara 100q','4760004417'],['Şəkər 1kq','4760005102'],['Un 2kq','4760006028'],['Yağ günəbaxan 1L','4760007760'],['Düyü 1kq','4760008835'],['Makaron 400q','4760009143'],['Su 1.5L','4760010019']];
+const STORES=['Mərkəzi anbar','Mağaza №1','Mağaza №2','Mağaza №3'];
+const SCN=[
+ {t:'təchizatçılarla üzləşmə',b:'Üzləşmə',q:`// Rübün sonuna qarşılıqlı hesablaşmaların üzləşməsi
+ВЫБРАТЬ
+  Расчеты.Контрагент,
+  Расчеты.СуммаОстаток КАК НашиДанные,
+  АктСверки.Сумма КАК ИхДанные
+ИЗ
+  РегистрНакопления.РасчетыСПоставщиками.Остатки(&КонецКвартала) КАК Расчеты
+  ЛЕВОЕ СОЕДИНЕНИЕ Документ.АктСверки КАК АктСверки
+  ПО Расчеты.Контрагент = АктСверки.Контрагент`,
+  h:['Kontragent','Bizim məlumat','Onların məlumatı','Fərq'],n:[1,2,3],
+  rows(){return shuffle(FIRMS).slice(0,RI(3,4)).map(f=>{const a=Math.round(R(8000,1200000))+pick([0,.5,.25,.8]);const d=Math.random()<.25?Math.round(R(50,900)):0;return [f,money(a),money(a-d),d?`<span class="bad">${money(d)}</span>`:'<span class="good">0,00</span>']})},
+  s(r){const bad=r.filter(x=>x[3].includes('bad')).length;return bad?`<span class="pill e">${bad} uyğunsuzluq</span>`:'<span class="pill">Hamısı uyğundur</span>'}},
+ {t:'anbar qalığı',b:'Qalıq',q:`// Mağazalar və anbar üzrə cari qalıq
+ВЫБРАТЬ
+  Остатки.Номенклатура,
+  Остатки.Номенклатура.Штрихкод КАК Штрихкод,
+  Остатки.Склад,
+  Остатки.КоличествоОстаток КАК Количество
+ИЗ
+  РегистрНакопления.ТоварыНаСкладах.Остатки(&Сегодня) КАК Остатки
+УПОРЯДОЧИТЬ ПО
+  Количество УБЫВ`,
+  h:['Məhsul','Barkod','Anbar','Qalıq'],n:[3],
+  rows(){return shuffle(GOODS).slice(0,4).map(([g,b])=>[g,b,pick(STORES),RI(12,940)]).sort((a,b)=>b[3]-a[3]).map(r=>[r[0],r[1],r[2],int(r[3])+' əd.'])},
+  s(r){return `<span class="pill">${r.length} mövqe</span>`}},
+ {t:'kassalar üzrə satış',b:'Satış',q:`// Bu gün kassalar üzrə satış
+ВЫБРАТЬ
+  Продажи.КассаККМ,
+  КОЛИЧЕСТВО(РАЗЛИЧНЫЕ Продажи.Регистратор) КАК Чеков,
+  СУММА(Продажи.Стоимость) КАК Сумма
+ИЗ
+  РегистрНакопления.Продажи КАК Продажи
+ГДЕ
+  Продажи.Период МЕЖДУ &НачалоДня И &КонецДня
+СГРУППИРОВАТЬ ПО
+  Продажи.КассаККМ`,
+  h:['Kassa','Çek sayı','Məbləğ, ₼','Orta çek'],n:[1,2,3],
+  rows(){return ['Kassa 1','Kassa 2','Kassa 3',pick(['Kassa 4','Web Kassa'])].map(k=>{const c=RI(40,420),s=c*R(9,38);return [k,int(c),money(s),money(s/c)]})},
+  s(r){const t=r.reduce((a,x)=>a+parseFloat(x[2].replace(/\s/g,'').replace(',','.')),0);return `<span class="pill">Cəmi: ${money(t)} ₼</span>`}},
+ {t:'e-kassa statusu',b:'E-kassa',q:`// E-kassaya göndərilməyən çekləri yoxla
+ВЫБРАТЬ
+  Чек.Номер,
+  Чек.Дата,
+  Чек.СуммаДокумента КАК Сумма,
+  Чек.ФискальныйСтатус КАК Статус
+ИЗ
+  Документ.ЧекККМ КАК Чек
+ГДЕ
+  Чек.Дата >= &НачалоСмены
+УПОРЯДОЧИТЬ ПО
+  Чек.Дата УБЫВ`,
+  h:['Çek №','Vaxt','Məbləğ, ₼','Status'],n:[2],
+  rows(){let n=RI(1200,4800),m=RI(9*60,20*60);return Array.from({length:4},()=>{n-=RI(1,4);m-=RI(2,25);const st=Math.random()<.2?'<span class="pill w">Növbədə</span>':'<span class="pill">Göndərildi</span>';return [String(n).padStart(6,'0'),`${String(m/60|0).padStart(2,'0')}:${String(m%60).padStart(2,'0')}`,money(R(2,180)),st]})},
+  s(r){const w=r.filter(x=>x[3].includes(' w')).length;return w?`<span class="pill w">${w} çek növbədə — avtomatik göndəriləcək</span>`:'<span class="pill">Bütün çeklər fiskallaşdırılıb</span>'}},
+ {t:'minimum qalıq',b:'Minimum',q:`// Minimum qalıqdan aşağı düşən mallar
+ВЫБРАТЬ
+  Остатки.Номенклатура,
+  Остатки.КоличествоОстаток КАК Остаток,
+  Мин.МинимальныйОстаток КАК Минимум
+ИЗ
+  РегистрНакопления.ТоварыНаСкладах.Остатки(&Сегодня) КАК Остатки
+  ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.МинимальныеОстатки КАК Мин
+  ПО Остатки.Номенклатура = Мин.Номенклатура
+ГДЕ
+  Остатки.КоличествоОстаток < Мин.МинимальныйОстаток`,
+  h:['Məhsul','Qalıq','Minimum','Sifariş et'],n:[1,2,3],
+  rows(){return shuffle(GOODS).slice(0,RI(3,4)).map(([g])=>{const mn=pick([20,30,50,100]),q=RI(0,mn-1);return [g,`<span class="bad">${q}</span>`,mn,`<b>${mn*2-q}</b>`]})},
+  s(r){return `<span class="pill e">${r.length} mal bitmək üzrədir</span>`}}
+];
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const KW=/(^|[^А-Яа-яЁёA-Za-z.])(ВЫБРАТЬ|ИЗ|КАК|ЛЕВОЕ|ВНУТРЕННЕЕ|СОЕДИНЕНИЕ|ПО|ГДЕ|И|МЕЖДУ|СГРУППИРОВАТЬ|УПОРЯДОЧИТЬ|УБЫВ|СУММА|КОЛИЧЕСТВО|РАЗЛИЧНЫЕ)(?![А-Яа-яЁё])/g;
+const hl=line=>{if(line.trim().startsWith('//'))return `<span class="c">${esc(line)}</span>`;return esc(line).replace(/&amp;[А-Яа-яA-Za-z]+/g,m=>`<span class="p">${m}</span>`).replace(KW,'$1<span class="k">$2</span>')};
+let qi=RI(0,SCN.length-1),qTimer=0,qAuto=0,qHover=false;
+const qShow=()=>{
+  clearTimeout(qTimer);const S=SCN[qi],L=S.q.split('\n'),rows=S.rows();
+  $('#qt').textContent='Sorğu konsolu — '+S.t;
+  $('#qtabs').innerHTML=SCN.map((s,i)=>`<button type="button" role="tab" data-i="${i}" aria-selected="${i===qi}">${s.b}</button>`).join('');
+  $('#qtab').innerHTML='';$('#qstat').innerHTML='Sorğu icra olunur…';
+  let k=0;const code=$('#qcode');
+  const typeLine=()=>{code.innerHTML=L.slice(0,k).map(hl).join('\n')+(k<L.length?'\n<span class="cursor"></span>':'');
+    if(k++<L.length){qTimer=setTimeout(typeLine,reduce?0:110)}else{
+      $('#qtab').innerHTML=`<thead><tr>${S.h.map((h,i)=>`<th class="${S.n.includes(i)?'n':''}">${h}</th>`).join('')}</tr></thead><tbody>${rows.map((r,j)=>`<tr class="row" style="animation-delay:${reduce?0:j*.18}s">${r.map((c,i)=>`<td class="${S.n.includes(i)?'n':''}">${c}</td>`).join('')}</tr>`).join('')}</tbody>`;
+      $('#qstat').innerHTML=`${rows.length} sətir · ${RI(3,48)} ms · ${S.s(rows)}`}};
+  typeLine();
+};
+const qNext=()=>{qi=(qi+1)%SCN.length;qShow()};
+$('#qnext').addEventListener('click',()=>{qNext();clearInterval(qAuto);qAuto=setInterval(()=>{if(!qHover)qNext()},15000)});
+const qRestart=()=>{clearInterval(qAuto);qAuto=setInterval(()=>{if(!qHover)qNext()},15000)};
+$('#qtabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b){qi=+b.dataset.i;qShow();qRestart()}});
+$('#qc').addEventListener('mouseenter',()=>qHover=true);$('#qc').addEventListener('mouseleave',()=>qHover=false);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+qShow();if(!reduce)qAuto=setInterval(()=>{if(!qHover)qNext()},15000);
+
+/* ===== Faydalı alətlər ===== */
+const az=v=>(Math.round(v*100)/100).toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:2});
+const num=el=>{const v=parseFloat(String(el.value).replace(',','.'));return isFinite(v)&&v>0?v:0};
+const rowsHtml=a=>a.map(([k,v,c])=>`<div class="row${c?' '+c:''}"><span>${k}</span><b>${v}</b></div>`).join('');
+const segSync=()=>document.querySelectorAll('.seg label').forEach(l=>l.classList.toggle('on',l.querySelector('input').checked));
+// tabs
+$('#ttabs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  document.querySelectorAll('#ttabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
+  document.querySelectorAll('.tpanel').forEach(p=>p.hidden=p.dataset.p!==b.dataset.t);
+  try{history.replaceState(null,'','#'+b.dataset.t)}catch(_){} });
+{const t=location.hash.slice(1),b=document.querySelector(`#ttabs [data-t="${t}"]`);if(b)b.click()}
+
+/* Maaş — qeyri-neft-qaz özəl sektor, DVX 2026 */
+const IT=[[.03,75,625],[.05,125,675],[.07,175,725]];
+const salary=(g,y,main)=>{const [lo,A,B]=IT[y];
+  const it=g<=2500?(main?Math.max(0,g-200):g)*lo:g<=8000?A+.10*(g-2500):B+.14*(g-8000);
+  const de=g<=200?.03*g:g<=8000?6+.10*(g-200):786+.10*(g-8000);
+  const dr=g<=200?.22*g:g<=8000?44+.15*(g-200):1214+.11*(g-8000);
+  const ts=g<=2500?.02*g:50+.005*(g-2500);
+  const is=.005*g; const r=x=>Math.round(x*100)/100;
+  const o={it:r(it),de:r(de),dr:r(dr),ts:r(ts),is:r(is)};o.net=r(g-o.it-o.de-o.ts-o.is);o.cost=r(g+o.dr+o.ts+o.is);return o};
+const sCalc=()=>{const dir=document.querySelector('[name=sdir]:checked').value,y=+$('#sYear').value,m=$('#sMain').value==='1',v=num($('#sAmt'));
+  $('#sLbl').textContent=dir==='g'?'Hesablanan əmək haqqı, ₼':'Əlinə çatan məbləğ, ₼';
+  let g=v;if(dir==='n'){let lo=0,hi=v*2+1000;for(let i=0;i<60;i++){const mid=(lo+hi)/2;salary(mid,y,m).net<v?lo=mid:hi=mid}g=Math.round(hi*100)/100}
+  const s=salary(g,y,m);
+  $('#sBigL').textContent=dir==='g'?'Əlinə çatan':'Hesablanmalı əmək haqqı';
+  $('#sBig').innerHTML=`${az(dir==='g'?s.net:g)} <small>₼</small>`;
+  $('#sRows').innerHTML=rowsHtml([['Hesablanan',az(g)],['Gəlir vergisi',az(s.it)],['DSMF (işçi)',az(s.de)],['İşsizlikdən sığorta (işçi)',az(s.is)],['İcbari tibbi sığorta (işçi)',az(s.ts)],['Əlinə çatan',az(s.net),'tot']])+
+   '<div class="sub">İşəgötürənin üzərinə</div>'+rowsHtml([['DSMF (işəgötürən)',az(s.dr)],['İşsizlikdən sığorta',az(s.is)],['İcbari tibbi sığorta',az(s.ts)],['İşçinin şirkətə cəmi xərci',az(s.cost),'tot']])};
+
+/* ƏDV */
+const vCalc=()=>{const a=num($('#vAmt')),r=num($('#vRate'))/100,inc=document.querySelector('[name=vdir]:checked').value==='in';
+  const net=inc?a/(1+r):a,vat=inc?a-net:a*r,tot=net+vat;
+  $('#vBig').innerHTML=`${az(vat)} <small>₼</small>`;
+  $('#vRows').innerHTML=rowsHtml([['ƏDV-siz məbləğ',az(net)],[`ƏDV ${az(r*100).replace(',00','')}%`,az(vat)],['ƏDV ilə cəmi',az(tot),'tot']])};
+
+/* Qiymət və marja */
+const pCalc=()=>{const c=num($('#pCost')),v=num($('#pVal')),d=document.querySelector('[name=pdir]:checked').value;
+  $('#pLbl').textContent={mk:'Əlavə (natsenka), %',mg:'Marja, %',pr:'Satış qiyməti, ₼'}[d];
+  let p=d==='mk'?c*(1+v/100):d==='mg'?(v<100?c/(1-v/100):0):v;const pr=p-c;
+  $('#pBig').innerHTML=`${az(p)} <small>₼</small>`;
+  $('#pRows').innerHTML=rowsHtml([['Maya dəyəri',az(c)],['Mənfəət (1 ədəd)',az(pr)],['Əlavə',c?az(pr/c*100)+' %':'—'],['Marja',p?az(pr/p*100)+' %':'—'],['ƏDV daxil 18% olsa',az(p*1.18)]])};
+
+/* EAN-13 */
+const eanCheck=d=>{let s=0;for(let i=0;i<12;i++)s+=+d[i]*(i%2?3:1);return (10-s%10)%10};
+const L=['0001101','0011001','0010011','0111101','0100011','0110001','0101111','0111011','0110111','0001011'];
+const Rr=L.map(c=>c.replace(/./g,b=>b==='0'?'1':'0')),G=Rr.map(c=>c.split('').reverse().join(''));
+const PAR=['LLLLLL','LLGLGG','LLGGLG','LLGGGL','LGLLGG','LGGLLG','LGGGLL','LGLGLG','LGLGGL','LGGLGL'];
+const eanSvg=c=>{const p=PAR[+c[0]];let bits='101';for(let i=1;i<7;i++)bits+=(p[i-1]==='L'?L:G)[+c[i]];bits+='01010';for(let i=7;i<13;i++)bits+=Rr[+c[i]];bits+='101';
+  const m=2,q=11*m,W=bits.length*m+q*2,H=80;let r='';
+  for(let i=0;i<bits.length;i++)if(bits[i]==='1'){const g=i<3||(i>=45&&i<50)||i>=92;r+=`<rect x="${q+i*m}" y="4" width="${m}" height="${g?H+6:H}"/>`}
+  const t=(s,x)=>`<text x="${x}" y="${H+20}" font-family="monospace" font-size="15" text-anchor="middle">${s}</text>`;
+  let tx=t(c[0],q-8);for(let i=1;i<7;i++)tx+=t(c[i],q+(3+(i-1)*7+3.5)*m);for(let i=7;i<13;i++)tx+=t(c[i],q+(50+(i-7)*7+3.5)*m);
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H+26}" width="${W*2}" height="${(H+26)*2}"><rect width="100%" height="100%" fill="#fff"/><g fill="#000">${r}</g>${tx}</svg>`};
+let bCode='';
+const bCalc=()=>{const d=$('#bIn').value.replace(/\D/g,'');$('#bIn').value=d;const msg=$('#bMsg');
+  if(d.length<12){msg.textContent=`Daha ${12-d.length} rəqəm lazımdır.`;$('#bSvg').innerHTML='';bCode='';return}
+  const ch=eanCheck(d);
+  if(d.length===13&&+d[12]!==ch){msg.innerHTML=`<b style="color:var(--red)">Yoxlama rəqəmi səhvdir:</b> ${d[12]} yox, ${ch} olmalıdır.`;bCode=d.slice(0,12)+ch}
+  else{msg.textContent=d.length===13?'Barkod düzgündür ✓':`Yoxlama rəqəmi: ${ch}`;bCode=d.slice(0,12)+ch}
+  const s=eanSvg(bCode);$('#bSvg').innerHTML=s;
+  try{$('#bDl').href=URL.createObjectURL(new Blob([s],{type:'image/svg+xml'}));$('#bDl').download='barkod-'+bCode+'.svg'}catch(_){}};
+$('#bRnd').addEventListener('click',()=>{let d=String(RI(20,29));while(d.length<12)d+=RI(0,9);$('#bIn').value=d;bCalc()});
+$('#bCp').addEventListener('click',()=>{if(!bCode)return;try{navigator.clipboard.writeText(bCode).then(()=>{$('#bCp').textContent='Kopyalandı ✓';setTimeout(()=>$('#bCp').textContent='Rəqəmləri kopyala',1500)})}catch(_){}});
+
+/* Tərəzi barkodu */
+const wCalc=()=>{const d=$('#wIn').value.replace(/\D/g,'');$('#wIn').value=d;const pk=num($('#wPrice')),f=$('#wFmt').value;
+  if(d.length!==13){$('#wBig').textContent='—';$('#wRows').innerHTML=rowsHtml([['Vəziyyət',`${d.length}/13 rəqəm`]]);return}
+  const ok=eanCheck(d)===+d[12],pref=d.slice(0,2),code=d.slice(2,7),val=+d.slice(7,12);const rows=[['Prefiks',pref+(+pref>=20&&+pref<=29?' (çəkili mal)':' — çəkili mal prefiksi deyil')],['Mal kodu (PLU)',code]];
+  if(f==='w'){const kg=val/1000;$('#wBigL').textContent='Çəki';$('#wBig').innerHTML=`${kg.toLocaleString('ru-RU',{minimumFractionDigits:3})} <small>kq</small>`;if(pk)rows.push(['Məbləğ',az(kg*pk)+' ₼','tot'])}
+  else{$('#wBigL').textContent='Məbləğ';$('#wBig').innerHTML=`${az(val/100)} <small>₼</small>`;if(pk)rows.push(['Çəki (təxmini)',(val/100/pk).toLocaleString('ru-RU',{maximumFractionDigits:3})+' kq'])}
+  rows.push(['Yoxlama rəqəmi',ok?'düzgündür ✓':'səhvdir ✗']);$('#wRows').innerHTML=rowsHtml(rows)};
+
+/* Kassa sayımı */
+const DEN=[200,100,50,20,10,5,1,.5,.2,.1,.05,.03,.01];
+$('#cash').innerHTML=DEN.map((v,i)=>`<label class="${v<1?'coin':''}"><span>${v>=1?v+' ₼':Math.round(v*100)+' qəp.'}</span><input type="number" inputmode="numeric" min="0" step="1" data-v="${v}" id="cd${i}" aria-label="${v>=1?v+' manat':Math.round(v*100)+' qəpik'} sayı" placeholder="0"></label>`).join('');
+const cCalc=()=>{let t=0,n=0,coins=0;document.querySelectorAll('#cash input').forEach(i=>{const c=Math.max(0,Math.floor(num(i)));t+=c*+i.dataset.v;n+=+i.dataset.v>=1?c:0;if(+i.dataset.v<1)coins+=c*+i.dataset.v});
+  t=Math.round(t*100)/100;$('#cBig').innerHTML=`${az(t)} <small>₼</small>`;
+  const rows=[['Əskinas sayı',n],['Xırda pul',az(coins)]];const e=num($('#cExp'));
+  if($('#cExp').value!==''){const df=Math.round((t-e)*100)/100;rows.push(['1C-yə görə',az(e)]);rows.push([df<0?'Kəsir':df>0?'Artıq':'Fərq',`<span style="color:${df<0?'#ff6b5e':df>0?'#ffcc00':'#6fd39a'}">${df===0?'0,00 ✓':az(Math.abs(df))}</span>`,'tot'])}
+  $('#cRows').innerHTML=rowsHtml(rows)};
+$('#cClr').addEventListener('click',()=>{document.querySelectorAll('#cash input').forEach(i=>i.value='');$('#cExp').value='';cCalc()});
+
+/* bağlantılar */
+const on=(sel,fn)=>document.querySelectorAll(sel).forEach(el=>{el.addEventListener('input',fn);el.addEventListener('change',fn)});
+on('[data-p=maas] input,[data-p=maas] select',()=>{segSync();sCalc()});
+on('[data-p=edv] input',()=>{segSync();vCalc()});
+on('[data-p=qiymet] input',()=>{segSync();pCalc()});
+on('#bIn',bCalc);on('[data-p=terezi] input,[data-p=terezi] select',wCalc);
+on('#cash input,#cExp',cCalc);
+segSync();sCalc();vCalc();pCalc();bCalc();wCalc();cCalc();
+
+/* Endirim və aksiya */
+const dCalc=()=>{const c=num($('#dCost')),p=num($('#dPrice')),v=num($('#dVal')),xy=document.querySelector('[name=ddir]:checked').value==='xy';
+  $('#dLbl').textContent=xy?'Alınmalı, ədəd (X)':'Endirim, %';$('#dYw').hidden=!xy;
+  const y=xy?Math.max(1,Math.floor(num($('#dY'))||1)):0,x=xy?Math.max(1,Math.floor(v)||1):0;
+  const np=xy?p*x/(x+y):p*(1-Math.min(v,100)/100),eff=p?(1-np/p)*100:0;
+  const pr0=p-c,pr1=np-c;
+  $('#dBig').innerHTML=`${az(np)} <small>₼</small>`;
+  const rows=[['Faktiki endirim',az(eff)+' %'],['Qazanc (aksiyasız)',az(pr0)],['Qazanc (aksiya ilə)',`<span style="color:${pr1<0?'#ff6b5e':'#6fd39a'}">${az(pr1)}</span>`],['Marja (aksiya ilə)',np?az(pr1/np*100)+' %':'—']];
+  if(xy)rows.splice(1,0,['Aksiya',`${x} al + ${y} pulsuz = ${x+y} ədəd ${az(p*x)} ₼`]);
+  rows.push(pr1<=0?['Nəticə','<span style="color:#ff6b5e">Zərərə satış!</span>','tot']:['Eyni qazanc üçün satış',pr0>0?'×'+(pr0/pr1).toLocaleString('ru-RU',{maximumFractionDigits:2})+' dəfə çox':'—','tot']);
+  $('#dRows').innerHTML=rowsHtml(rows)};
+
+/* Mal dövriyyəsi */
+const tCalc=()=>{const s=num($('#tStock')),cg=num($('#tCogs')),d=Math.max(1,num($('#tDays'))||1),ld=num($('#tLead'));
+  if(!s||!cg){$('#tBig').textContent='—';$('#tRows').innerHTML='';return}
+  const daily=cg/d,days=s/daily,turns=cg/s,yearT=365/days;
+  $('#tBig').innerHTML=`${days.toLocaleString('ru-RU',{maximumFractionDigits:1})} <small>gün</small>`;
+  $('#tRows').innerHTML=rowsHtml([['Gündəlik satış (maya)',az(daily)],['Dövrdə dövriyyə',turns.toLocaleString('ru-RU',{maximumFractionDigits:2})+' dəfə'],['İllik dövriyyə',yearT.toLocaleString('ru-RU',{maximumFractionDigits:1})+' dəfə'],['Minimum ehtiyat (tədarük üçün)',az(daily*ld)],['Pul anbarda yatır',days>60?'<span style="color:#ff6b5e">çox uzun</span>':days>30?'<span style="color:#ffcc00">orta</span>':'<span style="color:#6fd39a">sağlam</span>','tot']])};
+on('[data-p=endirim] input',()=>{segSync();dCalc()});on('[data-p=dovr] input',tCalc);dCalc();tCalc();
+
+/* Mobil İzləmə tanıtımı — hər girişdə yeni rəqəmlər */
+{const s=RI(2400,6800),p=Math.round(s*R(.18,.26)),c=RI(140,420),up=()=>`<small>▲ ${R(2,16).toFixed(1).replace('.',',')}%</small>`,i=RI(38000,62000);
+ $('#mobSt').innerHTML=`<div><b>${int(s)}</b><span>Bu gün satış</span>${up()}</div><div><b>${int(p)}</b><span>Qazanc</span>${up()}</div><div><b>${c}</b><span>Çek sayı</span>${up()}</div>`;
+ $('#mobRows').innerHTML=[['Günlük universal','Satış'],['İlkin qalıq',int(Math.round(i*1.27))],['Satış məbləği',int(s)],['Mənfəət faizi',(p/s*100).toFixed(1).replace('.',',')+'%'],['Son qalıq',int(Math.round((i-s*.78)*1.27))]].map(([a,b])=>`<div><span>${a}</span><b>${b}</b></div>`).join('')}
+
+/* 1C düzəliş və inteqrasiya — kod nümunələri */
+$('#intL').innerHTML=[['Hesabat və çap formaları','qaimə, etiket, akt, kassir hesabatı'],['Sənəd və emal','sizin iş prosesinizə görə'],['E-kassa','satış, qaytarma, X/Z, növbə'],['HTTP servis / API','mobil, sayt, terminal, Shopify'],['Bank və ödəniş','çıxarış, POS terminal'],['Telegram bildirişləri','Z-hesabat, minimum qalıq'],['Hüquqlar və ayrım','mağaza, kassa, istifadəçi'],['Tərəzi və skaner','barkod formatları, PLU']].map(([b,s])=>`<div><b>${b}</b><span>${s}</span></div>`).join('');
+const CODE=[
+ {b:'HTTP servis',t:'Mobil API — HTTP servis',d:'Telefon proqramı üçün 1C-də HTTP servis: sorğu imzasını yoxlayır və günün xülasəsini JSON ilə qaytarır. Mobil İzləmə, sayt və terminallar belə qoşulur.',c:`// HTTP servis api1: /hs/api1/menu?action=esas
+Функция MenuGET(Запрос)
+  Действие = Запрос.ПараметрыЗапроса.Получить("action");
+  Если Не ImzaDuzgundur(Запрос) Тогда
+    Возврат JSONОтвет(Новый Структура("error", "İmza yanlışdır"), 403);
+  КонецЕсли;
+  Если Действие = "esas" Тогда
+    Ответ = GununXulasesi(НачалоДня(ТекущаяДата()));
+    Возврат JSONОтвет(Ответ, 200);
+  КонецЕсли;
+  Возврат JSONОтвет(Новый Структура("error", "Naməlum əmr"), 400);
+КонецФункции
+
+Функция ImzaDuzgundur(Запрос)
+  Вакт = Запрос.Заголовки.Получить("X-Vaxt");
+  Имза = Запрос.Заголовки.Получить("X-Imza");
+  Строка = Ayar().ImzaAcar + "|" + Вакт + "|" + Запрос.ПараметрыЗапроса.Получить("action");
+  Возврат НРег(Sha256Hex(Строка)) = НРег(Имза);
+КонецФункции`},
+ {b:'E-kassa',t:'Çekin fiskallaşdırılması',d:'Çek 1C-dən birbaşa fiskal cihaza gedir. İnternet və ya cihaz cavab verməsə, çek növbəyə düşür və sonra avtomatik göndərilir — satış dayanmır.',c:`// Çeki e-kassaya göndər (provayderin HTTP API-si)
+Процедура ChekiFiskallashdir(Чек) Экспорт
+  Соединение = Новый HTTPСоединение(Ayar().EkassaHost, Ayar().EkassaPort,,,, 15);
+  Запрос = Новый HTTPЗапрос("/api/sale");
+  Запрос.Заголовки.Вставить("Content-Type", "application/json");
+  Запрос.УстановитьТелоИзСтроки(ChekJSON(Чек), КодировкаТекста.UTF8);
+  Попытка
+    Ответ = Соединение.ОтправитьДляОбработки(Запрос);
+  Исключение
+    NovbeyeQoy(Чек, ОписаниеОшибки());
+    Возврат;
+  КонецПопытки;
+  Если Ответ.КодСостояния = 200 Тогда
+    FiskalNomreYaz(Чек, Ответ.ПолучитьТелоКакСтроку());
+  Иначе
+    NovbeyeQoy(Чек, "Kod " + Ответ.КодСостояния);
+  КонецЕсли;
+КонецПроцедуры`},
+ {b:'Telegram',t:'Telegram bildirişi',d:'Növbə bağlananda, mal minimuma düşəndə və ya böyük endirim olanda rəhbərin telefonuna dərhal mesaj gəlir.',c:`// Z-hesabat bağlananda rəhbərə Telegram mesajı
+Процедура TelegramaGonder(Текст) Экспорт
+  HTTP = Новый COMОбъект("WinHttp.WinHttpRequest.5.1");
+  Адрес = "https://api.telegram.org/bot" + Ayar().BotToken + "/sendMessage";
+  HTTP.Open("POST", Адрес, Ложь);
+  HTTP.SetRequestHeader("Content-Type", "application/json; charset=utf-8");
+  Данные = Новый Структура("chat_id, text", Ayar().ChatID, Текст);
+  HTTP.Send(JSONStroka(Данные));
+КонецПроцедуры
+
+// Növbənin bağlanması
+TelegramaGonder("Kassa 1 bağlandı. Satış: " + Формат(Сумма, "ЧДЦ=2") + " ₼");`},
+ {b:'Hesabat',t:'Yeni hesabat — sorğu',d:'Sizin üçün xüsusi hesabat: məsələn ekspeditor üzrə satış və qazanc. Qruplaşdırma, filtrlər və çap forması ilə birlikdə.',c:`// Ekspeditor üzrə satış və qazanc
+ВЫБРАТЬ
+  ВЫРАЗИТЬ(Продажи.Регистратор КАК Документ.РеализацияТоваров).Экспедитор КАК Экспедитор,
+  КОЛИЧЕСТВО(РАЗЛИЧНЫЕ Продажи.Регистратор) КАК Накладных,
+  СУММА(Продажи.Стоимость) КАК Сумма,
+  СУММА(Продажи.Стоимость - Продажи.Себестоимость) КАК Прибыль
+ИЗ
+  РегистрНакопления.Продажи КАК Продажи
+ГДЕ
+  Продажи.Период МЕЖДУ &Начало И &Конец
+  И Продажи.Регистратор ССЫЛКА Документ.РеализацияТоваров
+СГРУППИРОВАТЬ ПО
+  ВЫРАЗИТЬ(Продажи.Регистратор КАК Документ.РеализацияТоваров).Экспедитор
+УПОРЯДОЧИТЬ ПО
+  Сумма УБЫВ`},
+ {b:'Tərəzi',t:'Tərəzi barkodunun oxunması',d:'Çəkili malın etiketindən mal və çəki avtomatik çıxarılır, kassada sətir dərhal yaranır. Format tərəzinin ayarına uyğun qurulur.',c:`// Tərəzi barkodu: 22 PPPPP ÇÇÇÇÇ K → mal + çəki (kq)
+Функция TereziBarkodu(Штрихкод) Экспорт
+  Если СтрДлина(Штрихкод) <> 13 Или Лев(Штрихкод, 2) <> "22" Тогда
+    Возврат Неопределено;
+  КонецЕсли;
+  Товар = Справочники.Номенклатура.НайтиПоРеквизиту("КодPLU", Сред(Штрихкод, 3, 5));
+  Если Товар.Пустая() Тогда
+    Возврат Неопределено;
+  КонецЕсли;
+  Результат = Новый Структура("Товар, Количество");
+  Результат.Товар = Товар;
+  Результат.Количество = Число(Сред(Штрихкод, 8, 5)) / 1000;
+  Возврат Результат;
+КонецФункции`}
+];
+const BSL=/^(Процедура|Функция|КонецПроцедуры|КонецФункции|Если|Тогда|Иначе|ИначеЕсли|КонецЕсли|Для|Каждого|Из|Цикл|КонецЦикла|Возврат|Новый|Попытка|Исключение|КонецПопытки|Экспорт|Не|И|Или|Неопределено|Истина|Ложь|ВЫБРАТЬ|ИЗ|КАК|ГДЕ|МЕЖДУ|СГРУППИРОВАТЬ|ПО|УПОРЯДОЧИТЬ|УБЫВ|СУММА|КОЛИЧЕСТВО|РАЗЛИЧНЫЕ|ВЫРАЗИТЬ|ССЫЛКА)$/;
+const hlB=line=>{let out='',i=0;const re=/("[^"]*"?)|(\/\/.*$)|(&[A-Za-zА-Яа-яЁё]+)|([A-Za-zА-Яа-яЁё_][A-Za-zА-Яа-яЁё_0-9]*)(\s*\()?|([^"\/&A-Za-zА-Яа-яЁё_]+|\/)/g;let m;
+  while((m=re.exec(line))){if(m[1])out+=`<span class="s">${esc(m[1])}</span>`;else if(m[2])out+=`<span class="c">${esc(m[2])}</span>`;else if(m[3])out+=`<span class="p">${esc(m[3])}</span>`;
+    else if(m[4]){out+=BSL.test(m[4])?`<span class="k">${m[4]}</span>`:m[5]?`<span class="f">${m[4]}</span>`:m[4];if(m[5])out+=m[5]}else out+=esc(m[6]||'')}
+  return out};
+let ci=0;
+const cShow=i=>{ci=i;const S=CODE[i];$('#ct').textContent='Konfiqurator — '+S.t;
+  $('#ctabs').innerHTML=CODE.map((s,j)=>`<button type="button" role="tab" data-i="${j}" aria-selected="${j===i}">${s.b}</button>`).join('');
+  $('#ccode').innerHTML=S.c.split('\n').map(hlB).join('\n');$('#cdesc').textContent=S.d};
+$('#ctabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)cShow(+b.dataset.i)});
+cShow(0);
+document.addEventListener('click',e=>{const a=e.target.closest('[data-need]');if(a)$('#ft').value=a.dataset.need});
+
+/* calculator */
+const calc=()=>{
+  const u=+$('#usr').value,p=+$('#pts').value,k=+$('#cfg').value,n=document.querySelectorAll('#int input:checked').length;
+  $('#usrv').textContent=u;$('#ptsv').textContent=p;
+  const h=Math.round((4+u*.35+p*1.2+n*2)*k);
+  const t=h<=TIERS[0].h?TIERS[0]:h<=TIERS[1].h?TIERS[1]:TIERS[2];
+  const hh=Math.max(h,t.h);
+  $('#res').innerHTML=`${hh*RATE} <small>AZN / ay</small>`;$('#rt').textContent=t.n;$('#rh').textContent=hh+' saat';$('#rr').textContent=t.r;
+  $('#calcGo').dataset.tier=t.n;
+};
+['#usr','#pts','#cfg'].forEach(s=>$(s).addEventListener('input',calc));
+$('#int').addEventListener('change',e=>{const c=e.target.closest('.chip');if(c)c.classList.toggle('on',e.target.checked);calc()});calc();
+document.addEventListener('click',e=>{const a=e.target.closest('[data-tier]');if(a){$('#ft').value='Aylıq müşayiət';$('#fm').value=`"${a.dataset.tier}" müşayiət paketi ilə maraqlanıram.`}});
+
+/* form → WhatsApp / Telegram */
+let to='wa';
+document.querySelectorAll('#frm button').forEach(b=>b.addEventListener('click',()=>to=b.dataset.to));
+$('#frm').addEventListener('submit',e=>{
+  e.preventDefault();const m=$('#okm');m.style.display='block';
+  if(!$('#fn').value.trim()||!$('#fp').value.trim()){m.textContent='Zəhmət olmasa adınızı və telefonunuzu yazın.';return}
+  if(!$('#fa').checked){m.textContent='Davam etmək üçün razılıq qutusunu işarələyin.';return}
+  const txt=`Salam! Saytdan müraciət:\nAd: ${$('#fn').value}\nTelefon: ${$('#fp').value}\nŞirkət: ${$('#fc').value||'-'}\nNöv: ${$('#ft').value}\n${$('#fm').value}`;
+  const url=to==='wa'?`https://wa.me/${PHONE}?text=${encodeURIComponent(txt)}`:`https://t.me/${TG}`;
+  if(to==='tg'){try{navigator.clipboard.writeText(txt)}catch(_){}}
+  const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+  m.innerHTML=to==='wa'?'Mesaj WhatsApp-da açıldı — göndər düyməsini basın. Açılmadısa, <a href="'+url+'" target="_blank" rel="noopener">buraya klikləyin</a>.':'Mətn kopyalandı — Telegram-da @k1r1pt0n-a yapışdırıb göndərin. <a href="'+url+'" target="_blank" rel="noopener">Telegram-ı aç</a>.';
+});
+}
+</script>
 </body>
 </html>
