@@ -47,6 +47,18 @@ async def main():
                 check(lum < 80 if scheme == "light" else lum > 180, f"{scheme} {name}: h1 rəngi fonla uyğun deyil ({h_col})")
                 await pg.close()
 
+        # POS demo paneli (dashboard.html): hər iki rejimdə panellər temaya uyğun, satış işləyir
+        for scheme in ("light", "dark"):
+            pg, errs = await open_page(b, "dashboard.html", scheme)
+            check(not errs, f"{scheme} dashboard: JS xətası {errs}")
+            for sel in (".sidebar", ".topbar", ".erp-toolbar", ".catalog-list"):
+                c = await pg.evaluate(f"getComputedStyle(document.querySelector('{sel}')).backgroundColor")
+                lum = sum(rgb(c)) / 3
+                check(lum > 200 if scheme == "light" else lum < 50, f"{scheme} dashboard {sel}: rəng temaya uyğun deyil ({c})")
+            await pg.click("#catalog-list > *:nth-child(1)")
+            check(await pg.inner_text("#cart-line-count") == "1", f"{scheme} dashboard: mal səbətə düşmədi")
+            await pg.close()
+
         # Gecə/gündüz düyməsi işləyir və yadda qalır
         pg, _ = await open_page(b, "index.html", "light")
         await pg.click("#thm")
