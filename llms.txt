@@ -37,4 +37,3 @@ How an agent should engage: BarkodPRO has no public self-service API, booking sy
 ## Optional
 
 - [Sitemap](https://xeyalshixi.github.io/barkodpro/sitemap.xml)
-- [Source code of this website](https://github.com/xeyalshixi/barkodpro)

@@ -96,7 +96,7 @@ for k in ("name", "url", "description", "logo", "sameAs", "knowsAbout", "makesOf
     check(org.get(k), f"index.html: Organization.{k} yoxdur")
 alt_md = [l["href"] for l in home.links if l.get("type") == "text/markdown"]
 check(alt_md == [BASE + "index.md"], f"index.html: Markdown alternate link: {alt_md}")
-check(any("github.com/xeyalshixi" in h for h in home.hrefs), "index.html: GitHub linki yoxdur")
+check(not any("github.com" in h for h in home.hrefs), "index.html: GitHub linki olmamalıdır")
 check(bool(home.meta.get("keywords")), "index.html: meta keywords yoxdur")
 
 # 3. Sitemap
